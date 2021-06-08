@@ -6,6 +6,8 @@
 albedo_texture = ExtResource( 1 )
 normal_enabled = true
 normal_scale = 1.0
+uv1_scale = Vector3( 0.02, 0.02, 0.02 )
+uv1_triplanar = true
 
 [node name="Ramp" type="CSGBox"]
 transform = Transform( -0.918681, 0.394716, 0.0149926, 0.394648, 0.918803, -0.00739282, -0.0166933, -0.000874847, -0.99986, 24.0522, -14.6878, 34.0561 )

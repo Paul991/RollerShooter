@@ -31,7 +31,7 @@ func _physics_process(delta):
 func _input(event):
 	if event is InputEventMouseMotion:
 		var movement = event.relative
-		Pointer.rotation.y += -deg2rad(movement.x*0.5)
+		Pointer.rotation.y += -deg2rad(movement.x*0.5) # it doesnt go 360. it has caps at both ends
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
 	if event.is_action_pressed("restart"):

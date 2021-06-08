@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://assets/textures/Metal_Rusted_Diffuse_2.png" type="Texture" id=1]
+[ext_resource path="res://assets/textures/Floor_Tech_Glow.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player/Player.gd" type="Script" id=2]
 [ext_resource path="res://scenes/shaders&particles/Toon_shader.shader" type="Shader" id=3]
 [ext_resource path="res://assets/sfx/AlienWeapon4.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/textures/Floor_Tech_Diffuse.png" type="Texture" id=5]
 
 [sub_resource type="PhysicsMaterial" id=1]
 resource_local_to_scene = true
@@ -22,10 +23,12 @@ radius = 7.0
 height = 14.0
 
 [sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 0.772549, 0.898039, 0.588235, 1 )
-albedo_texture = ExtResource( 1 )
-metallic = 0.63
-roughness = 0.57
+albedo_texture = ExtResource( 5 )
+normal_enabled = true
+normal_scale = -7.4
+normal_texture = ExtResource( 1 )
+uv1_scale = Vector3( 0.1, 0.1, 0.1 )
+uv1_triplanar = true
 
 [sub_resource type="AudioStreamRandomPitch" id=6]
 audio_stream = ExtResource( 4 )

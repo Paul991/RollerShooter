@@ -5,7 +5,9 @@
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 1 )
 normal_enabled = true
-normal_scale = 1.0
+normal_scale = -10.0
+uv1_scale = Vector3( 0.01, 0.01, 0.01 )
+uv1_triplanar = true
 
 [node name="Cube" type="CSGBox"]
 use_collision = true
