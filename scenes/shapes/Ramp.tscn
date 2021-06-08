@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/textures/Floor_Tiles_Diffuse_2.png" type="Texture" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.0
+
+[node name="Ramp" type="CSGBox"]
+transform = Transform( -0.918681, 0.394716, 0.0149926, 0.394648, 0.918803, -0.00739282, -0.0166933, -0.000874847, -0.99986, 24.0522, -14.6878, 34.0561 )
+use_collision = true
+collision_layer = 2
+collision_mask = 17
+width = 141.238
+height = 72.74
+depth = 88.3964
+material = SubResource( 1 )
