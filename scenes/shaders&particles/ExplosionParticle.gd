@@ -11,5 +11,5 @@ func _ready():
 func _process(delta):
 	life -= delta
 	if life < 0:
-		print("Particle death")
+#		print("Particle death")
 		queue_free()

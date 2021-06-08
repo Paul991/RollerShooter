@@ -5,7 +5,7 @@ onready var camera = get_parent().get_node("CameraPos/Camera")
 onready var camera_pos = get_parent().get_node("CameraPos")
 onready var Pointer = get_parent().get_node("Pointer")
 
-var bullet_scene = preload("res://scenes/player/Bullet.tscn")
+
 var cursor_pos = Vector3.ZERO
 
 var speed = 15
@@ -23,7 +23,9 @@ func _physics_process(delta):
 		camera_pos.rotation.y = lerp(camera_pos.rotation.y, Pointer.rotation.y, 0.02)
 		apply_central_impulse(Vector3(speed*dir.x, 0 , speed*dir.y))
 	if Input.is_action_pressed("shoot") and $BulletCooldown.is_stopped():
-		add_bullet(dir)
+		$BulletCooldown.start()
+		Pointer.add_bullet(dir)
+		$Sfx/Shoot.play()
 
 
 func _input(event):
@@ -36,19 +38,10 @@ func _input(event):
 		get_tree().reload_current_scene()
 
 
-func add_bullet(dir):
-	var b = bullet_scene.instance()
-	$BulletCooldown.start()
-	get_parent().add_child(b)
-	b.global_transform.origin = Pointer.Pos.global_transform.origin
-	b.rotation.y = Pointer.rotation.y
-	b.shoot = true
-	$Sfx/Shoot.play()
-#	b.apply_central_impulse(Vector3(b.SPEED*dir.x, 0, b.SPEED*dir.y))
 
 func get_2d_dir():
 	var main = Pointer.global_transform.origin
-	var point = Pointer.Point.global_transform.origin
+	var point = Pointer.Pos.global_transform.origin
 	var dir = Vector2.ZERO
 	
 	main = Vector2(main.x, main.z)
