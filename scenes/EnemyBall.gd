@@ -7,17 +7,31 @@ onready var Player = get_parent().get_parent().get_node("Player")
 
 export var max_health = 100
 
+var saw_scene = load("res://scenes/enemies/Saw.tscn")
+var saw
+
 var cursor_pos = Vector3.ZERO
 
 var speed = 10
 var health = max_health setget _set_health
 
 
+func _ready() -> void:
+	add_saw()
+
+
 func _physics_process(delta):
 	var dir = get_2d_dir()
-
+	
 	apply_central_impulse(Vector3(speed*dir.x, 0 , speed*dir.y))
 
+
+
+func add_saw():
+	var s = saw_scene.instance()
+	get_parent().call_deferred("add_child", s)
+	saw = s
+	saw.parent = self
 
 
 func get_2d_dir():
@@ -31,6 +45,7 @@ func get_2d_dir():
 	return dir
 
 func _death():
+	saw.queue_free()
 	queue_free()
 
 func _set_health(value):

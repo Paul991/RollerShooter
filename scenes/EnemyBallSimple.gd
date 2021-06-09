@@ -14,7 +14,7 @@ var health = max_health setget _set_health
 var speed = 10
 var rng = RandomNumberGenerator.new()
 
-
+# make them explode at start (maybe this enemies are bombs)
 # give random collision at start, and change direction with collision(mayb better donw with kinematic)
 
 func ready():

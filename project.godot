@@ -18,8 +18,6 @@ config/icon="res://icon.png"
 
 window/size/width=1280
 window/size/height=780
-window/size/resizable=false
-window/size/fullscreen=true
 
 [input]
 
