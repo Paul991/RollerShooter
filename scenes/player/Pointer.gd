@@ -3,6 +3,7 @@ extends Spatial
 enum Amount {ONE, TWO, THREE}
 
 
+onready var Player = get_parent().get_node("Player")
 onready var Point = get_node("Point")
 onready var Left = get_node("Left")
 onready var Right = get_node("Right")
@@ -18,6 +19,11 @@ export(Amount) var guns = Amount.ONE
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_guns()
+
+
+func _process(delta: float) -> void:
+	translation = Player.global_transform.origin
+
 
 func set_guns():
 	match guns:

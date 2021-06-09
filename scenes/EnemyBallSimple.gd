@@ -23,7 +23,7 @@ func ready():
 
 
 func _physics_process(delta):
-	apply_central_impulse(Vector3(speed*move_vector.x,0 ,move_vector.y))
+	apply_central_impulse(Vector3(speed*move_vector.x*delta,0 ,move_vector.y*delta))
 
 func random_dir():
 	var num = Vector2(rng.randf_range(-1,1),rng.randf_range(-1,1))

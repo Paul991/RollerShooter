@@ -9,7 +9,7 @@
 [sub_resource type="PhysicsMaterial" id=1]
 resource_local_to_scene = true
 rough = true
-bounce = 0.2
+bounce = 0.5
 
 [sub_resource type="SphereShape" id=2]
 radius = 7.0
@@ -35,6 +35,7 @@ audio_stream = ExtResource( 4 )
 random_pitch = 1.45
 
 [node name="Player" type="RigidBody"]
+collision_layer = 17
 collision_mask = 2
 mass = 4.0
 physics_material_override = SubResource( 1 )
@@ -62,3 +63,5 @@ one_shot = true
 [node name="Shoot" type="AudioStreamPlayer3D" parent="Sfx"]
 stream = SubResource( 6 )
 unit_db = 19.004
+
+[connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]

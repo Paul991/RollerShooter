@@ -17,7 +17,7 @@ func _ready():
 
 func _physics_process(delta):
 #	print("Pointer rotaion: %s"%Pointer.rotation_degrees.y)
-	Pointer.translation = global_transform.origin
+	
 	var dir = get_2d_dir()
 
 
@@ -63,3 +63,8 @@ func get_2d_dir():
 	point = Vector2(point.x, point.z)
 	dir = main.direction_to(point)
 	return dir
+
+
+func _on_Player_body_entered(body: Node) -> void:
+	if body.is_in_group("Saws"): # not really doing it
+		apply_impulse(body.basis.z, -body.basis.z*10)
