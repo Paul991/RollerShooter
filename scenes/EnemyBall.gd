@@ -21,7 +21,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta):
-	var dir = get_2d_dir()
+	var dir = get_2d_dir(global_transform.origin, Player.global_transform.origin)
 	
 	apply_central_impulse(Vector3(speed*dir.x, 0 , speed*dir.y))
 
@@ -34,14 +34,13 @@ func add_saw():
 	saw.parent = self
 
 
-func get_2d_dir():
-	var main = global_transform.origin
-	var point = Player.global_transform.origin
+func get_2d_dir(from, to):
+
 	var dir = Vector2.ZERO
 	
-	main = Vector2(main.x, main.z)
-	point = Vector2(point.x, point.z)
-	dir = main.direction_to(point)
+	from = Vector2(from.x, from.z)
+	to = Vector2(to.x, to.z)
+	dir = from.direction_to(to)
 	return dir
 
 func _death():

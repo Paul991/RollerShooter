@@ -17,7 +17,14 @@ height = 18.0
 
 [sub_resource type="SpatialMaterial" id=4]
 albedo_texture = ExtResource( 1 )
-roughness = 0.0
+normal_enabled = true
+normal_scale = 13.8
+normal_texture = ExtResource( 1 )
+clearcoat_enabled = true
+clearcoat = 1.0
+clearcoat_gloss = 0.5
+uv1_scale = Vector3( 0.1, 0.1, 0.1 )
+uv1_triplanar = true
 
 [node name="EnemyBall" type="RigidBody" groups=[
 "Enemy",

@@ -1,6 +1,8 @@
 extends RigidBody
 
 
+signal health_updated(health)
+
 onready var camera = get_parent().get_node("CameraPos/Camera")
 onready var camera_pos = get_parent().get_node("CameraPos")
 onready var Pointer = get_parent().get_node("Pointer")
@@ -9,8 +11,13 @@ onready var Pointer = get_parent().get_node("Pointer")
 var cursor_pos = Vector3.ZERO
 
 var speed = 15
+var max_health = 300
+var health = max_health setget _set_health
+var hurt = false
+var start_pos
 
 func _ready():
+	start_pos = translation
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 #	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 ##	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -18,7 +25,7 @@ func _ready():
 func _physics_process(delta):
 #	print("Pointer rotaion: %s"%Pointer.rotation_degrees.y)
 	
-	var dir = get_2d_dir()
+	var dir = get_2d_dir(Pointer.global_transform.origin, Pointer.Pos.global_transform.origin)
 
 
 	if Input.get_action_strength("move") > 0:
@@ -52,19 +59,43 @@ func _input(event):
 	if event.is_action_pressed("restart"):
 		get_tree().reload_current_scene()
 
+func get_2d_dir(from, to):
 
-
-func get_2d_dir():
-	var main = Pointer.global_transform.origin
-	var point = Pointer.Pos.global_transform.origin
 	var dir = Vector2.ZERO
 	
-	main = Vector2(main.x, main.z)
-	point = Vector2(point.x, point.z)
-	dir = main.direction_to(point)
+	from = Vector2(from.x, from.z)
+	to = Vector2(to.x, to.z)
+	dir = from.direction_to(to)
 	return dir
 
 
-func _on_Player_body_entered(body: Node) -> void:
+func death():
+	_set_health(max_health)
+	translation = start_pos
+
+
+func _set_health(value):
+	var prev_health = health
+	health = clamp(value, 0, max_health)
+	if health != prev_health:
+		emit_signal("health_updated", health)
+		if health <= 0:
+			death()
+
+
+func damage(value):
+	if !hurt:
+		$HurtBox/InvTimer.start()
+		hurt = true
+		_set_health(health - value)
+		
+
+func _on_HurtBox_body_entered(body: Node) -> void:
 	if body.is_in_group("Saws"): # not really doing it
-		apply_impulse(body.basis.z, -body.basis.z*10)
+		damage(50)
+		var dir = get_2d_dir(body.global_transform.origin, global_transform.origin)
+		apply_impulse(body.global_transform.origin, Vector3(dir.x, 0, dir.y)*100)
+
+
+func _on_InvTimer_timeout() -> void:
+	hurt = false
