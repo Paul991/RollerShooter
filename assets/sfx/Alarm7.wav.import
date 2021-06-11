@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Alarm7.wav-26472ddf327f1c53be3c91b77d62307b.sample"
+
+[deps]
+
+source_file="res://assets/sfx/Alarm7.wav"
+dest_files=[ "res://.import/Alarm7.wav-26472ddf327f1c53be3c91b77d62307b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/textures/HexTile_2.png" type="Texture" id=1]
 [ext_resource path="res://scenes/EnemyBall.gd" type="Script" id=2]
+[ext_resource path="res://scenes/enemies/EnemyHurtbox.tscn" type="PackedScene" id=3]
 
 [sub_resource type="PhysicsMaterial" id=1]
 resource_local_to_scene = true
@@ -26,6 +27,9 @@ clearcoat_gloss = 0.5
 uv1_scale = Vector3( 0.1, 0.1, 0.1 )
 uv1_triplanar = true
 
+[sub_resource type="SphereShape" id=5]
+radius = 10.0
+
 [node name="EnemyBall" type="RigidBody" groups=[
 "Enemy",
 ]]
@@ -48,3 +52,10 @@ shape = SubResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0530243, -0.0543604, -0.0121536 )
 mesh = SubResource( 3 )
 material/0 = SubResource( 4 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 3 )]
+
+[node name="CollisionShape" parent="Hurtbox" index="0"]
+shape = SubResource( 5 )
+
+[editable path="Hurtbox"]

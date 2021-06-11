@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/player/Camera.gd" type="Script" id=1]
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/player/Pointer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Main.gd" type="Script" id=4]
+[ext_resource path="res://scenes/ui/GameCues.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/shapes/Floor.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/shapes/Ramp.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/shapes/Wall.tscn" type="PackedScene" id=8]
@@ -26,6 +28,7 @@ bounce = 0.2
 
 [node name="Level" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136887, -1.52588e-05, 0.609985 )
+script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 10, 0 )
@@ -96,11 +99,43 @@ transform = Transform( 0.978685, 0, -0.205367, 0, 1, 0, 0.205367, 0, 0.978685, 6
 physics_material_override = SubResource( 2 )
 
 [node name="EnemyBallSimple6" parent="Enemies" instance=ExtResource( 11 )]
-transform = Transform( 0.978685, 0, -0.205367, 0, 1, 0, 0.205367, 0, 0.978685, 26.7594, 101, 209.15 )
+transform = Transform( 0.978685, 0, -0.205367, 0, 1, 0, 0.205367, 0, 0.978685, 26.7594, 101, 130.405 )
 physics_material_override = SubResource( 2 )
 
 [node name="EnemyBallSimple7" parent="Enemies" instance=ExtResource( 11 )]
 transform = Transform( 0.978685, 0, -0.205367, 0, 1, 0, 0.205367, 0, 0.978685, 94.8568, 101, -115.371 )
+physics_material_override = SubResource( 2 )
+
+[node name="EnemyBallSimple9" parent="Enemies" instance=ExtResource( 11 )]
+transform = Transform( 0.3975, 0, -0.917602, 0, 1, 0, 0.917602, 0, 0.3975, -280.917, 101, -340.166 )
+physics_material_override = SubResource( 2 )
+
+[node name="EnemyBallSimple10" parent="Enemies" instance=ExtResource( 11 )]
+transform = Transform( 0.3975, 0, -0.917602, 0, 1, 0, 0.917602, 0, 0.3975, -165.613, 101, -390.115 )
+physics_material_override = SubResource( 2 )
+
+[node name="EnemyBallSimple11" parent="Enemies" instance=ExtResource( 11 )]
+transform = Transform( 0.200582, 0, -0.979677, 0, 1, 0, 0.979677, 0, 0.200582, -307.913, 101, -322.967 )
+physics_material_override = SubResource( 2 )
+
+[node name="EnemyBallSimple12" parent="Enemies" instance=ExtResource( 11 )]
+transform = Transform( 0.200582, 0, -0.979677, 0, 1, 0, 0.979677, 0, 0.200582, -184.809, 101, -348.172 )
+physics_material_override = SubResource( 2 )
+
+[node name="EnemyBallSimple13" parent="Enemies" instance=ExtResource( 11 )]
+transform = Transform( 0.980536, 0, -0.19634, 0, 1, 0, 0.19634, 0, 0.980536, 154.865, 101, 130.502 )
+physics_material_override = SubResource( 2 )
+
+[node name="EnemyBallSimple14" parent="Enemies" instance=ExtResource( 11 )]
+transform = Transform( 0.980536, 0, -0.19634, 0, 1, 0, 0.19634, 0, 0.980536, -307.3, 101, 7.28978 )
+physics_material_override = SubResource( 2 )
+
+[node name="EnemyBallSimple15" parent="Enemies" instance=ExtResource( 11 )]
+transform = Transform( 0.919314, 0, -0.393525, 0, 1, 0, 0.393525, 0, 0.919314, 153.611, 101, 162.487 )
+physics_material_override = SubResource( 2 )
+
+[node name="EnemyBallSimple16" parent="Enemies" instance=ExtResource( 11 )]
+transform = Transform( 0.919314, 0, -0.393525, 0, 1, 0, 0.393525, 0, 0.919314, -283.776, 101, 46.9678 )
 physics_material_override = SubResource( 2 )
 
 [node name="EnemyBallSimple8" parent="Enemies" instance=ExtResource( 11 )]
@@ -113,6 +148,22 @@ physics_material_override = SubResource( 3 )
 
 [node name="EnemyBall8" parent="Enemies" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 92.2542, 123.807, -254.452 )
+physics_material_override = SubResource( 3 )
+
+[node name="EnemyBall9" parent="Enemies" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.7217, 123.807, -359.179 )
+physics_material_override = SubResource( 3 )
+
+[node name="EnemyBall10" parent="Enemies" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5325, 123.807, -359.179 )
+physics_material_override = SubResource( 3 )
+
+[node name="EnemyBall11" parent="Enemies" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.7217, 123.807, 344.193 )
+physics_material_override = SubResource( 3 )
+
+[node name="EnemyBall12" parent="Enemies" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5325, 123.807, 344.193 )
 physics_material_override = SubResource( 3 )
 
 [node name="EnemyBall2" parent="Enemies" instance=ExtResource( 10 )]
@@ -144,10 +195,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 10, 0 )
 script = ExtResource( 12 )
 
 [node name="Camera" type="Camera" parent="CameraPos"]
-transform = Transform( 1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 120, 40 )
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 40, 40 )
 keep_aspect = 0
 current = true
 fov = 120.0
+near = 10.0
 far = 8192.0
 script = ExtResource( 1 )
 
@@ -158,3 +210,5 @@ guns = 1
 transform = Transform( -0.248003, -0.909855, 0.332654, 0.666988, 0.0886668, 0.739774, -0.702582, 0.405342, 0.584873, -23.712, 64.9239, -4.52955 )
 shadow_enabled = true
 directional_shadow_max_distance = 200.0
+
+[node name="GameCues" parent="." instance=ExtResource( 5 )]

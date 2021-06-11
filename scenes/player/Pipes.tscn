@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="CylinderMesh" id=1]
+bottom_radius = 0.6
+height = 5.0
+rings = 1
+
+[sub_resource type="CapsuleMesh" id=2]
+radius = 1.5
+mid_height = 2.0
+
+[sub_resource type="CylinderMesh" id=3]
+top_radius = 2.5
+bottom_radius = 0.7
+height = 6.0
+
+[sub_resource type="CapsuleMesh" id=4]
+mid_height = 6.0
+
+[sub_resource type="CylinderMesh" id=5]
+top_radius = 9.0
+bottom_radius = 9.0
+
+[node name="Pipes" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 2.98655, 0, 10.1209 )
+
+[node name="CSGMesh" type="CSGMesh" parent="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 0.970448, -0.241312, 0, 0.241312, 0.970448, 0, 0, 0 )
+mesh = SubResource( 1 )
+
+[node name="CSGMesh2" type="CSGMesh" parent="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98572, 0.854207 )
+mesh = SubResource( 2 )
+
+[node name="CSGMesh3" type="CSGMesh" parent="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 0.0966448, -0.995319, 0, 0.995319, 0.0966448, 0, 1.98572, 0.854207 )
+mesh = SubResource( 3 )
+
+[node name="CSGTorus" type="CSGTorus" parent="MeshInstance/CSGMesh3"]
+transform = Transform( 1, 0, 0, 0, 0.999993, 0.00368262, 0, -0.00368262, 0.999993, 0, 2.8026, 0.0394979 )
+
+[node name="CSGTorus2" type="CSGTorus" parent="MeshInstance/CSGMesh3"]
+transform = Transform( 1, 0, 0, 0, 0.999994, 0.00368261, 0, -0.00368261, 0.999994, 0, 0.247685, 0.03455 )
+operation = 2
+inner_radius = 1.0
+outer_radius = 4.0
+sides = 12
+ring_sides = 13
+
+[node name="CSGTorus3" type="CSGTorus" parent="MeshInstance/CSGMesh3"]
+transform = Transform( 1, 0, 0, 0, 0.994112, 0.108364, 0, -0.108364, 0.994112, 0, 3.33358, 0.020391 )
+operation = 2
+inner_radius = 0.001
+outer_radius = 2.0
+sides = 12
+ring_sides = 13
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, -3.01345, 0, 10.1209 )
+
+[node name="CSGMesh" type="CSGMesh" parent="MeshInstance2"]
+transform = Transform( 1, 0, 0, 0, 0.970448, -0.241312, 0, 0.241312, 0.970448, 0, 0, 0 )
+mesh = SubResource( 1 )
+
+[node name="CSGMesh2" type="CSGMesh" parent="MeshInstance2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98572, 0.854207 )
+mesh = SubResource( 2 )
+
+[node name="CSGMesh3" type="CSGMesh" parent="MeshInstance2"]
+transform = Transform( 1, 0, 0, 0, 0.0966448, -0.995319, 0, 0.995319, 0.0966448, 0, 1.98572, 0.854207 )
+mesh = SubResource( 3 )
+
+[node name="CSGTorus" type="CSGTorus" parent="MeshInstance2/CSGMesh3"]
+transform = Transform( 1, 0, 0, 0, 0.999993, 0.00368262, 0, -0.00368262, 0.999993, 0, 2.8026, 0.0394979 )
+
+[node name="CSGTorus2" type="CSGTorus" parent="MeshInstance2/CSGMesh3"]
+transform = Transform( 1, 0, 0, 0, 0.999994, 0.00368261, 0, -0.00368261, 0.999994, 0, 0.247685, 0.03455 )
+operation = 2
+inner_radius = 1.0
+outer_radius = 4.0
+sides = 12
+ring_sides = 13
+
+[node name="CSGTorus3" type="CSGTorus" parent="MeshInstance2/CSGMesh3"]
+transform = Transform( 1, 0, 0, 0, 0.994112, 0.108364, 0, -0.108364, 0.994112, 0, 3.33358, 0.020391 )
+operation = 2
+inner_radius = 0.001
+outer_radius = 2.0
+sides = 12
+ring_sides = 13
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00945854, -2.06299, 9.37747 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="CSGMesh" type="CSGMesh" parent="MeshInstance3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.37967, 0, 4.76837e-07 )
+operation = 2
+mesh = SubResource( 5 )
