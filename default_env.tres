@@ -6,3 +6,4 @@ sky_top_color = Color( 0.25098, 0.352941, 0.407843, 1 )
 [resource]
 background_mode = 2
 background_sky = SubResource( 1 )
+glow_enabled = true
