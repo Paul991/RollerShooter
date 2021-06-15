@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/3604253_rocket-flight-loop_by_interestingmedia_preview.mp3-c42415a6f543795bf9d6b8f0129c8ec2.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/3604253_rocket-flight-loop_by_interestingmedia_preview.mp3"
+dest_files=[ "res://.import/3604253_rocket-flight-loop_by_interestingmedia_preview.mp3-c42415a6f543795bf9d6b8f0129c8ec2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -4,20 +4,22 @@ extends Position3D
 
 
 var offset
-onready var Player = get_parent().get_node("Player")
-onready var Pointer = get_parent().get_node("Pointer")
+var Player = null
+
 onready var camera = $Camera
 
 var move_vector = Vector3.ZERO
 var cursor_pos = Vector3.ZERO
 
 
-# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	
+	 Player = get_parent().player
 
 
 func _physics_process(delta):
-
-	translation = Player.translation
+	if Player != null:
+		translation = Player.translation
 #	look_at_cursor()
 
 

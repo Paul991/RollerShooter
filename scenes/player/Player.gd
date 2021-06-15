@@ -1,12 +1,17 @@
 extends RigidBody
 
 
+enum Attach {ROUND, POINT}
+
+
+
 signal health_updated(health)
 signal max_health_updated(max_health)
 
 onready var camera = get_parent().get_node("CameraPos/Camera")
 onready var camera_pos = get_parent().get_node("CameraPos")
-onready var Pointer = get_parent().get_node("Pointer")
+onready var round_scene = preload("res://scenes/player/weapons/RoundCage.tscn")
+onready var point_scene = preload("res://scenes/player/weapons/Pointer.tscn")
 
 
 
@@ -16,31 +21,40 @@ var speed = 15
 var health = max_health setget _set_health
 var hurt = false
 var respawn = false
+var Cage = null
 var start_pos
 
 export(int) var max_health setget _set_max_health
+export(Attach) var type = Attach.POINT
 
 func _ready():
+	get_parent().player = self
+	_spawn_cage()
 	_set_max_health(max_health)
 	start_pos = translation
-	print(start_pos)
+
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 #	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 ##	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _physics_process(delta):
-#	print("Pointer rotaion: %s"%Pointer.rotation_degrees.y)
-	
-	var dir = get_2d_dir(Pointer.global_transform.origin, Pointer.Pos.global_transform.origin)
-	if Input.get_action_strength("move") > 0:
-		print(camera_pos.rotation_degrees.y)
-#		camera_pos.rotation_degrees.y = lerp(camera_pos.rotation_degrees.y, Pointer.rotation_degrees.y, 0.02)
-		apply_central_impulse(Vector3(speed*dir.x, 0 , speed*dir.y))
-	if Input.is_action_pressed("shoot") and $BulletCooldown.is_stopped():
-		$BulletCooldown.start()
-		Pointer.add_bullet(dir)
-		$Sfx/Shoot.play()
-	camera_pos.rotation_degrees.y = lerp(camera_pos.rotation_degrees.y, Pointer.rotation_degrees.y, 0.05)
+	if Cage != null:
+		var plane_speed = Vector2(linear_velocity.x, linear_velocity.z)
+		var dir = get_2d_dir(Cage.global_transform.origin, Cage.Pos.global_transform.origin)
+		_engine_sound(get_speed(plane_speed))
+		if Input.get_action_strength("move") > 0:
+
+	#		camera_pos.rotation_degrees.y = lerp(camera_pos.rotation_degrees.y, Pointer.rotation_degrees.y, 0.02)
+			apply_central_impulse(Vector3(speed*dir.x, 0 , speed*dir.y))
+
+		if Input.is_action_pressed("shoot") and $BulletCooldown.is_stopped():
+			$BulletCooldown.start()
+			Cage.add_bullet(dir)
+			$Sfx/Shoot.play()
+			
+		camera_pos.rotation_degrees.y = lerp(camera_pos.rotation_degrees.y, Cage.rotation_degrees.y, 0.05)
+
+
 
 
 func _input(event):
@@ -48,18 +62,9 @@ func _input(event):
 		
 		var movement = event.relative
 		var screen = get_viewport().size
-#		if Input.get_action_strength("move") == 0:
-#			while camera_pos.rotation_degrees.y >= 360: # camera is a little weird when this happens
-#				camera_pos.rotation_degrees.y -= 360
-#			while camera_pos.rotation_degrees.y <= -360:
-#				camera_pos.rotation_degrees.y += 360
-#			while Pointer.rotation_degrees.y >= 360: # camera is a little weird when this happens
-#				Pointer.rotation_degrees.y -= 360
-#			while Pointer.rotation_degrees.y <= -360:
-#				Pointer.rotation_degrees.y += 360
-		
 
-		Pointer.rotation_degrees.y += -movement.x*0.2
+		if Cage != null:
+			Cage.rotation_degrees.y += -movement.x*0.2
 
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
@@ -67,12 +72,34 @@ func _input(event):
 		get_tree().reload_current_scene()
 
 
+func _spawn_cage():
+	var a
+	match type:
+		Attach.POINT:
+			$BulletCooldown.set_wait_time(0.15)
+			a = point_scene.instance()
+		Attach.ROUND:
+			$BulletCooldown.set_wait_time(0.07)
+			a = round_scene.instance()
+	print(a.name)
+	get_parent().call_deferred("add_child", a)
+	yield(get_tree(), "idle_frame")
+	Cage = a
+
 func _integrate_forces(state):
 	if respawn:
 		var t = state.get_transform()   
 		t.origin = start_pos
 		respawn = false
 		state.set_transform(t)
+
+
+func get_speed(value: Vector2): # sort of
+
+	if abs(value.x) > abs(value.y):
+		return abs(value.x)
+	else:
+		return abs(value.y)
 
 
 func get_2d_dir(from, to):
@@ -90,6 +117,18 @@ func death():
 	_set_health(max_health)
 	respawn = true
 #	translation = start_pos
+
+
+func _engine_sound(value):
+	var current_speed = value
+	if current_speed > 1:
+		$Sfx/Engine.set_pitch_scale(current_speed/100+1.5)
+		print(current_speed)
+
+		if $Sfx/Engine.is_playing() == false:
+				$Sfx/Engine.play()
+	else:
+		$Sfx/Engine.stop() # maybe, maybe not
 
 
 func _set_health(value):

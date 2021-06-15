@@ -1,20 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/shaders&particles/materials/pipes_gold_mat.tres" type="Material" id=1]
 [ext_resource path="res://assets/textures/Metal_Rusted_Diffuse_2.png" type="Texture" id=2]
 [ext_resource path="res://scenes/player/Pipe.tscn" type="PackedScene" id=3]
 
-[sub_resource type="CapsuleMesh" id=4]
+[sub_resource type="CapsuleMesh" id=1]
 radius = 0.8
 mid_height = 4.0
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=2]
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="CylinderMesh" id=5]
-material = ExtResource( 1 )
-top_radius = 9.0
-bottom_radius = 9.0
+[sub_resource type="SphereMesh" id=3]
+radius = 9.0
+height = 18.0
 
 [node name="Pipes" type="Spatial"]
 
@@ -28,10 +26,10 @@ transform = Transform( 0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 2
 
 [node name="Support" type="CSGMesh" parent="MeshInstance"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00945854, -2.06299, 9.14358 )
-mesh = SubResource( 4 )
-material = SubResource( 6 )
+mesh = SubResource( 1 )
+material = SubResource( 2 )
 
 [node name="CSGMesh" type="CSGMesh" parent="MeshInstance/Support"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.08807, 0, 4.62867e-07 )
 operation = 2
-mesh = SubResource( 5 )
+mesh = SubResource( 3 )

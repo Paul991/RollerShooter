@@ -3,7 +3,7 @@ extends RigidBody
 
 signal health_updated(health)
 
-onready var Player = get_parent().get_parent().get_node("Player")
+onready var Player = get_parent().get_parent().player
 onready var timer = $Timer
 
 export var max_health = 100
@@ -11,7 +11,7 @@ export var max_health = 100
 var move_vector = Vector2.ZERO
 var cursor_pos = Vector3.ZERO
 var health = max_health setget _set_health
-var speed = 10
+var speed = 20
 var rng = RandomNumberGenerator.new()
 
 # make them explode at start (maybe this enemies are bombs)

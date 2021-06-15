@@ -33,6 +33,11 @@ hue_variation = 0.77
 [sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.835294, 0, 0, 1 )
 roughness = 0.0
+emission_enabled = true
+emission = Color( 0.54902, 0, 0, 1 )
+emission_energy = 5.0
+emission_operator = 0
+emission_on_uv2 = false
 
 [sub_resource type="CubeMesh" id=5]
 material = SubResource( 4 )

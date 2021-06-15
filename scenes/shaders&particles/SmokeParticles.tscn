@@ -34,7 +34,7 @@ params_billboard_mode = 3
 particles_anim_h_frames = 10
 particles_anim_v_frames = 1
 particles_anim_loop = true
-albedo_color = Color( 0.752941, 0.752941, 0.752941, 1 )
+albedo_color = Color( 0.643137, 0.643137, 0.643137, 1 )
 albedo_texture = ExtResource( 1 )
 
 [sub_resource type="QuadMesh" id=5]
@@ -42,7 +42,7 @@ material = SubResource( 4 )
 
 [node name="Smoke" type="Particles"]
 amount = 2
-lifetime = 0.5
+lifetime = 0.7
 randomness = 1.0
 draw_order = 2
 process_material = SubResource( 3 )

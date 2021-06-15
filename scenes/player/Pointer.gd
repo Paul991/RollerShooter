@@ -9,10 +9,10 @@ onready var Left = get_node("Left")
 onready var Right = get_node("Right")
 onready var Pos = get_node("Pos")
 
-var bullet_scene = preload("res://scenes/player/Bullet.tscn")
+var bullet_scene = preload()
 
 
-export(Amount) var guns = Amount.ONE
+export(Amount) var guns = Amount.THREE
 
 
 

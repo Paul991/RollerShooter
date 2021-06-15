@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/textures/effects/smokesheet.png" type="Texture" id=1]
+
+[sub_resource type="Gradient" id=9]
+offsets = PoolRealArray( 0, 0.515493, 0.749296, 0.867606, 0.991549, 0.994366, 1 )
+colors = PoolColorArray( 0.895294, 0.902344, 0, 1, 0.968627, 1, 0, 1, 0.654673, 0.0920635, 0, 1, 0.440918, 0.0723381, 0, 1, 0, 0, 0, 1, 0.16282, 0.0263048, 0, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=10]
+gradient = SubResource( 9 )
+
+[sub_resource type="Curve" id=11]
+_data = [ Vector2( 0, 0.759091 ), 0.0, 0.0, 0, 0, Vector2( 0.878307, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=12]
+curve = SubResource( 11 )
+
+[sub_resource type="ParticlesMaterial" id=15]
+lifetime_randomness = 0.25
+trail_divisor = 2
+flag_rotate_y = true
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 4.0
+initial_velocity_random = 0.34
+angular_velocity = -288.57
+angular_velocity_random = 1.0
+scale = 2.0
+scale_random = 1.0
+scale_curve = SubResource( 12 )
+color_ramp = SubResource( 10 )
+anim_speed = 2.0
+anim_speed_random = 0.2
+
+[sub_resource type="SpatialMaterial" id=14]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 10
+particles_anim_v_frames = 1
+particles_anim_loop = true
+albedo_color = Color( 1, 0.537255, 0, 1 )
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="QuadMesh" id=16]
+material = SubResource( 14 )
+
+[node name="Jet" type="Particles"]
+amount = 100
+lifetime = 0.5
+explosiveness = 0.1
+randomness = 1.0
+draw_order = 2
+process_material = SubResource( 15 )
+draw_pass_1 = SubResource( 16 )

@@ -27,7 +27,7 @@ func _on_HurtBox_body_entered(body: Node) -> void:
 		parent.apply_impulse(body.global_transform.origin, Vector3(dir.x*50, 0, dir.y*50))
 		damage(50)
 	if "EnemyBallSimple" in body.name:
-		damage(15)
+		damage(20)
 
 func _on_InvTimer_timeout() -> void:
 	parent.hurt = false

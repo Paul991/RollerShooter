@@ -3,7 +3,7 @@ extends RigidBody
 
 signal health_updated(health)
 
-onready var Player = get_parent().get_parent().get_node("Player")
+onready var Player = get_parent().get_parent().player
 
 export var max_health = 100
 
@@ -21,9 +21,10 @@ func _ready() -> void:
 
 
 func _physics_process(delta):
-	var dir = get_2d_dir(global_transform.origin, Player.global_transform.origin)
-	
-	apply_central_impulse(Vector3(speed*dir.x, 0 , speed*dir.y))
+	if Player != null:
+		var dir = get_2d_dir(global_transform.origin, Player.global_transform.origin)
+		
+		apply_central_impulse(Vector3(speed*dir.x, 0 , speed*dir.y))
 
 
 

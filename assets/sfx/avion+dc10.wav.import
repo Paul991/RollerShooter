@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/avion+dc10.wav-955fc9b3eb38a7785898a1c704bbf769.sample"
+
+[deps]
+
+source_file="res://assets/sfx/avion+dc10.wav"
+dest_files=[ "res://.import/avion+dc10.wav-955fc9b3eb38a7785898a1c704bbf769.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

@@ -1,0 +1,205 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://scenes/shaders&particles/materials/pipes_gold_mat.tres" type="Material" id=1]
+[ext_resource path="res://scenes/player/weapons/RoundCage.gd" type="Script" id=2]
+[ext_resource path="res://scenes/shaders&particles/materials/rect_bullet.tres" type="Material" id=3]
+[ext_resource path="res://assets/textures/effects/push.png" type="Texture" id=4]
+[ext_resource path="res://scenes/player/weapons/DownCheck.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 2, 4, 1.5 )
+
+[sub_resource type="StreamTexture" id=2]
+flags = 23
+load_path = "res://.import/Metal_Rusted_Diffuse_2.png-3332fa99c432b3f97c88e53356186b6a.s3tc.stex"
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = SubResource( 2 )
+metallic = 1.0
+roughness = 0.59
+normal_enabled = true
+normal_scale = 1.47
+uv1_scale = Vector3( 0.05, 0.05, 0.05 )
+uv1_triplanar = true
+
+[sub_resource type="CylinderMesh" id=4]
+material = SubResource( 3 )
+top_radius = 13.0
+bottom_radius = 13.0
+height = 1.0
+
+[sub_resource type="CylinderMesh" id=5]
+material = ExtResource( 1 )
+top_radius = 12.0
+bottom_radius = 12.0
+height = 1.0
+
+[sub_resource type="CubeMesh" id=6]
+size = Vector3( 2, 4, 1.5 )
+
+[sub_resource type="CylinderMesh" id=7]
+material = ExtResource( 1 )
+top_radius = 13.0
+bottom_radius = 13.0
+height = 1.0
+
+[sub_resource type="CubeMesh" id=8]
+size = Vector3( 2, 4, 1.5 )
+
+[sub_resource type="CylinderMesh" id=9]
+material = ExtResource( 1 )
+top_radius = 15.5
+bottom_radius = 15.0
+height = 1.0
+
+[sub_resource type="CylinderMesh" id=10]
+top_radius = 20.0
+bottom_radius = 20.0
+height = 20.0
+
+[sub_resource type="CylinderMesh" id=11]
+material = ExtResource( 1 )
+top_radius = 14.5
+bottom_radius = 14.5
+
+[sub_resource type="SpatialMaterial" id=12]
+albedo_color = Color( 0, 0.211765, 0.462745, 1 )
+metallic = 0.54
+roughness = 0.4
+emission_enabled = true
+emission = Color( 0, 0.211765, 0.462745, 1 )
+emission_energy = 10.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="Curve" id=13]
+_data = [ Vector2( 0, 1 ), 0.0, -2.73239, 0, 0, Vector2( 0.140212, 0.557955 ), -3.43636, -3.43636, 0, 0, Vector2( 0.325397, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=14]
+curve = SubResource( 13 )
+
+[sub_resource type="ParticlesMaterial" id=15]
+lifetime_randomness = 0.1
+flag_rotate_y = true
+direction = Vector3( 0, 0, 1 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 75.35
+scale_curve = SubResource( 14 )
+color = Color( 0.611765, 0.592157, 0.592157, 1 )
+anim_speed = 2.0
+anim_speed_random = 0.2
+
+[sub_resource type="SpatialMaterial" id=16]
+flags_transparent = true
+flags_unshaded = true
+params_blend_mode = 1
+params_depth_draw_mode = 1
+albedo_color = Color( 0.0196078, 0.466667, 0.603922, 1 )
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="QuadMesh" id=17]
+material = SubResource( 16 )
+size = Vector2( 15, 1 )
+
+[node name="RoundCage" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Point" type="CSGMesh" parent="."]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0.143425, -10.7148 )
+mesh = SubResource( 1 )
+material = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CSGMesh3" type="CSGMesh" parent="Point"]
+transform = Transform( 3.06072e-08, 1, -1.05697e-07, 0.7, -4.37114e-08, 6.10865e-05, 6.10865e-05, -1.51e-07, -0.7, -9.03353e-07, -10.3332, 0.933374 )
+mesh = SubResource( 4 )
+
+[node name="CSGMesh2" type="CSGMesh" parent="Point/CSGMesh3"]
+operation = 2
+mesh = SubResource( 5 )
+material = ExtResource( 1 )
+
+[node name="CSGBox" type="CSGBox" parent="Point/CSGMesh3"]
+transform = Transform( 0.993508, 9.66223e-09, 0.113758, -1.02296e-08, 1, 4.40411e-09, -0.113758, -5.53921e-09, 0.993508, -0.000211716, 2.12474e-07, -9.45302 )
+operation = 2
+width = 33.7356
+depth = 24.3819
+
+[node name="Left" type="CSGMesh" parent="."]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -12.1295, -0.255148, -1.8035 )
+mesh = SubResource( 6 )
+material = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CSGMesh2" type="CSGMesh" parent="Left"]
+transform = Transform( -1, -2.5411e-21, -8.74228e-08, 8.74228e-08, -4.37114e-08, -1, -3.82137e-15, -1, 4.37114e-08, -12.1295, 0.815062, 0.055771 )
+mesh = SubResource( 7 )
+
+[node name="CSGMesh2" type="CSGMesh" parent="Left/CSGMesh2"]
+operation = 2
+mesh = SubResource( 5 )
+
+[node name="CSGBox" type="CSGBox" parent="Left/CSGMesh2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.8833 )
+operation = 2
+width = 33.7356
+depth = 29.3646
+
+[node name="Right" type="CSGMesh" parent="."]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 12.1357, -0.261918, -1.71363 )
+mesh = SubResource( 8 )
+material = ExtResource( 3 )
+
+[node name="Pos" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.7692 )
+
+[node name="Body" type="CSGMesh" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.753816, 0.657086, 0, -0.657086, 0.753816, 0, -7.7952, -3.01846 )
+mesh = SubResource( 9 )
+
+[node name="CSGMesh3" type="CSGMesh" parent="Body"]
+transform = Transform( 1, 0, 0, 0, 0.745825, -0.666142, 0, 0.666142, 0.745825, 0, -1.41471, -1.23317 )
+operation = 2
+mesh = SubResource( 10 )
+
+[node name="CSGMesh2" type="CSGMesh" parent="Body"]
+operation = 2
+mesh = SubResource( 11 )
+
+[node name="CSGTorus" type="CSGTorus" parent="Body"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.849308, 0.130325 )
+inner_radius = 9.0
+outer_radius = 15.0
+sides = 21
+ring_sides = 12
+material = SubResource( 12 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="Body/CSGTorus"]
+transform = Transform( 1, 0, 0, 0, 0.921158, -0.389188, 0, 0.389188, 0.921158, 0, 3.342, -3.716 )
+operation = 2
+radius = 18.0
+height = 20.9038
+sides = 16
+
+[node name="CSGBox" type="CSGBox" parent="Body/CSGTorus"]
+transform = Transform( 1, 0, 0, 0, 0.601871, 0.798594, 0, -0.798594, 0.601871, 0, -2.52624, 13.0317 )
+operation = 2
+width = 24.0386
+height = 9.46803
+depth = 3.36226
+
+[node name="Push" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.943859, 0.33035, 0, -0.33035, 0.943859, 0, 0.64654, 8.33632 )
+lifetime = 0.5
+randomness = 1.0
+visibility_aabb = AABB( -4, -4, -12.0056, 8, 8, 24.0112 )
+draw_order = 2
+process_material = SubResource( 15 )
+draw_pass_1 = SubResource( 17 )
+
+[node name="DownCheck" parent="." instance=ExtResource( 5 )]
