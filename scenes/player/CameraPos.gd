@@ -13,7 +13,6 @@ var cursor_pos = Vector3.ZERO
 
 
 func _ready() -> void:
-	
 	 Player = get_parent().player
 
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/player/Camera.gd" type="Script" id=1]
+[ext_resource path="res://scenes/player/PlayerStart.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/textures/pack/Tile_01_Big_A_Lite.png" type="Texture" id=3]
 [ext_resource path="res://scenes/Main.gd" type="Script" id=4]
 [ext_resource path="res://scenes/ui/GameCues.tscn" type="PackedScene" id=5]
@@ -11,12 +12,6 @@
 [ext_resource path="res://scenes/EnemyBall.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/EnemyBallSimple.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/player/CameraPos.gd" type="Script" id=12]
-[ext_resource path="res://scenes/player/GoldPlayer.tscn" type="PackedScene" id=13]
-
-[sub_resource type="PhysicsMaterial" id=5]
-resource_local_to_scene = true
-rough = true
-bounce = 0.5
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0, 0.639216, 0.4, 1 )
@@ -45,10 +40,10 @@ bounce = 0.2
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136887, -1.52588e-05, 0.609985 )
 script = ExtResource( 4 )
 
-[node name="GoldPlayer" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55.834, 15.5296, 0 )
-physics_material_override = SubResource( 5 )
-type = 0
+[node name="PlayerStart" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2748, 18.0855, 0 )
+ball = 1
+frame = 1
 
 [node name="World" type="Spatial" parent="."]
 

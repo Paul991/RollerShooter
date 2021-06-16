@@ -1,0 +1,156 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scenes/shaders&particles/materials/pipes_gold_mat.tres" type="Material" id=1]
+[ext_resource path="res://assets/sfx/3604253_rocket-flight-loop_by_interestingmedia_preview.mp3" type="AudioStream" id=2]
+[ext_resource path="res://scenes/player/weapons/JetCage.gd" type="Script" id=3]
+[ext_resource path="res://scenes/shaders&particles/materials/dark_mat.tres" type="Material" id=4]
+[ext_resource path="res://scenes/player/weapons/DownCheck.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/shapes/player/Pipes.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/shaders&particles/SmokeParticles.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/shaders&particles/JetParticles.tscn" type="PackedScene" id=8]
+
+[sub_resource type="PrismMesh" id=1]
+size = Vector3( 4, 5, 2 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 2, 7, 0.5 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 2, 8, 0.5 )
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 2, 9, 0.5 )
+
+[sub_resource type="CubeMesh" id=5]
+size = Vector3( 10.5, 1, 0.5 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0, 0.211765, 0.462745, 1 )
+metallic = 0.53
+roughness = 0.68
+
+[sub_resource type="CapsuleMesh" id=7]
+material = SubResource( 6 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[node name="Pointer" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="Point" type="CSGMesh" parent="."]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, -11.4412 )
+mesh = SubResource( 1 )
+material = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CSGMesh" type="CSGMesh" parent="Point"]
+transform = Transform( 1, -2.07009e-08, 5.64883e-08, -2.07009e-08, 0.76321, 0.646151, -5.64883e-08, -0.646151, 0.76321, -1.48127e-06, -16.9437, -5.65195 )
+mesh = SubResource( 2 )
+material = ExtResource( 4 )
+
+[node name="CSGMesh2" type="CSGMesh" parent="Point"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.18484e-07, -10.5062, -7.84564 )
+mesh = SubResource( 3 )
+material = ExtResource( 4 )
+
+[node name="CSGMesh3" type="CSGMesh" parent="Point"]
+transform = Transform( 1, -4.36929e-08, -7.56997e-08, -4.3693e-08, 0.500212, -0.865903, 7.56999e-08, 0.865903, 0.500212, -3.89963e-07, -4.46064, -4.10991 )
+mesh = SubResource( 4 )
+material = ExtResource( 4 )
+
+[node name="Left" type="CSGMesh" parent="."]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -12, 0, 0.558829 )
+mesh = SubResource( 1 )
+material = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Arm2" type="CSGMesh" parent="Left"]
+transform = Transform( 0.885668, 0.326778, 0.329861, 0.381227, -0.106218, -0.918359, 0.265062, -0.939113, 0.218651, -5.51144, -5.64139, -1.37724 )
+mesh = SubResource( 5 )
+material = ExtResource( 4 )
+
+[node name="CSGMesh2" type="CSGMesh" parent="Left/Arm2"]
+transform = Transform( 0.315724, -0.419532, 0.851065, 0.206934, 0.905796, 0.369745, -0.926012, 0.059377, 0.372797, 6.09424, 0.160216, -0.412964 )
+mesh = SubResource( 7 )
+
+[node name="CSGTorus" type="CSGTorus" parent="Left/Arm2"]
+transform = Transform( 2.19533, -0.0630946, 0.0162603, 0.081624, 0.345086, -0.937836, 0.117836, 0.936448, 0.346694, 0.179827, 0.023906, 0.0923371 )
+inner_radius = 2.8
+sides = 13
+ring_sides = 4
+material = SubResource( 8 )
+
+[node name="CSGBox" type="CSGBox" parent="Left/Arm2/CSGTorus"]
+transform = Transform( 0.451286, 0.0335027, 0.042783, -0.0720707, -0.259138, 0.963148, 0.0953805, -0.963024, -0.251968, -0.291633, -0.270858, -1.66876 )
+operation = 2
+width = 15.0334
+height = 3.07134
+
+[node name="Right" type="CSGMesh" parent="."]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 12, 0, 0.558829 )
+mesh = SubResource( 1 )
+material = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Arm" type="CSGMesh" parent="Right"]
+transform = Transform( -0.897156, -0.185861, -0.400709, 0.358401, 0.223954, -0.906308, 0.258187, -0.956713, -0.134308, 5.11, -5.5, -1.5 )
+mesh = SubResource( 5 )
+material = ExtResource( 4 )
+
+[node name="CSGMesh2" type="CSGMesh" parent="Right/Arm"]
+transform = Transform( 0.363951, -0.27055, 0.891259, 0.228519, 0.953574, 0.196151, -0.902951, 0.132279, 0.40888, 5.88278, 0.116412, -0.507404 )
+mesh = SubResource( 7 )
+
+[node name="CSGTorus" type="CSGTorus" parent="Right/Arm"]
+transform = Transform( 2.19788, -0.0419157, -0.0129266, -0.0196326, 0.0943153, -0.995503, 0.0944821, 0.99466, 0.0938503, 0.296016, 0.0651494, 0.135801 )
+inner_radius = 2.8
+sides = 13
+ring_sides = 4
+material = SubResource( 8 )
+
+[node name="CSGBox" type="CSGBox" parent="Right/Arm/CSGTorus"]
+transform = Transform( 0.451286, 0.0335027, 0.042783, -0.0720707, -0.259138, 0.963148, 0.0953805, -0.963024, -0.251968, -0.291633, -0.270859, -1.66876 )
+operation = 2
+width = 15.0334
+height = 3.07134
+
+[node name="Pos" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.4412 )
+
+[node name="BulletCooldown" type="Timer" parent="."]
+
+[node name="Pipes" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -1.44117 )
+
+[node name="Pipe" parent="Pipes/MeshInstance" index="0"]
+transform = Transform( 0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, -2.12114, 0, 10 )
+
+[node name="Smoke" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.761048, 0, -4.94174, 0, 5, 0, 4.94174, 0, -0.761048, -3.5792, 6.40662, 15.4638 )
+
+[node name="Jet" parent="." instance=ExtResource( 8 )]
+transform = Transform( -0.761048, 0, -4.94174, 0, 5, 0, 4.94174, 0, -0.761048, -3.62275, 6.33142, 16.1988 )
+
+[node name="Smoke2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.780535, 0, -4.9387, 0, 5, 0, 4.9387, 0, 0.780535, 3.3675, 6.46688, 15.5526 )
+
+[node name="Jet2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.780535, 0, -4.9387, 0, 5, 0, 4.9387, 0, 0.780535, 3.30873, 6.33142, 15.9983 )
+
+[node name="DownCheck" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.992078 )
+
+[node name="JetNoise" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 2 )
+unit_db = 20.0
+pitch_scale = 1.2
+bus = "Effects"
+
+[editable path="Pipes"]
