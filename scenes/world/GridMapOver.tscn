@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/world/Over.tres" type="MeshLibrary" id=1]
+
+[node name="GridMap" type="GridMap"]
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 50, 50, 50 )
+data = {
+"cells": PoolIntArray(  )
+}
+__meta__ = {
+"_editor_clip_": 0
+}

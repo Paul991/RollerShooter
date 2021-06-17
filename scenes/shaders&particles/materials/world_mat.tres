@@ -1,0 +1,14 @@
+[gd_resource type="SpatialMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://assets/textures/pack/Tile_02_Blue_A.png" type="Texture" id=1]
+[ext_resource path="res://assets/textures/pack/Tile_02_A.png" type="Texture" id=2]
+
+[resource]
+albedo_color = Color( 0.407843, 0.745098, 0.909804, 1 )
+albedo_texture = ExtResource( 2 )
+roughness = 0.6
+normal_enabled = true
+normal_scale = 5.0
+normal_texture = ExtResource( 1 )
+uv1_scale = Vector3( 0.03, 0.03, 0.03 )
+uv1_triplanar = true
