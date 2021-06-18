@@ -1,7 +1,7 @@
 extends RigidBody
 
 const DAMAGE = 50
-const SPEED = 30
+const SPEED = 25
 
 
 var explosion_scene = load("res://scenes/shaders&particles/ExplosionParticle.tscn")

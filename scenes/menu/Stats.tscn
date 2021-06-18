@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/menu/Stats.gd" type="Script" id=1]
+[ext_resource path="res://scenes/menu/StatProgress.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/menu/Label.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://assets/ui/Orbitron-Medium.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 40
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = SubResource( 9 )
+
+[node name="Stats" type="HBoxContainer"]
+margin_right = 589.0
+margin_bottom = 172.0
+custom_constants/separation = 40
+alignment = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_right = 229.0
+margin_bottom = 172.0
+
+[node name="Label" parent="VBoxContainer2" instance=ExtResource( 4 )]
+margin_left = 0.0
+margin_right = 229.0
+custom_fonts/font = SubResource( 10 )
+
+[node name="Label2" parent="VBoxContainer2" instance=ExtResource( 4 )]
+margin_left = 0.0
+margin_top = 44.0
+margin_right = 229.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 10 )
+text = "wEIGHT"
+uppercase = true
+
+[node name="Label3" parent="VBoxContainer2" instance=ExtResource( 4 )]
+margin_left = 0.0
+margin_top = 88.0
+margin_right = 229.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 10 )
+text = "firerate"
+uppercase = true
+
+[node name="Label4" parent="VBoxContainer2" instance=ExtResource( 4 )]
+margin_left = 0.0
+margin_top = 132.0
+margin_right = 229.0
+margin_bottom = 172.0
+custom_fonts/font = SubResource( 10 )
+text = "damage"
+uppercase = true
+
+[node name="VBox" type="VBoxContainer" parent="."]
+margin_left = 269.0
+margin_right = 589.0
+margin_bottom = 172.0
+custom_constants/separation = 12
+
+[node name="Speed" parent="VBox" instance=ExtResource( 3 )]
+rect_scale = Vector2( 1, 1 )
+
+[node name="Weight" parent="VBox" instance=ExtResource( 3 )]
+margin_top = 44.0
+margin_bottom = 76.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="Firerate" parent="VBox" instance=ExtResource( 3 )]
+margin_top = 88.0
+margin_bottom = 120.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="Damage" parent="VBox" instance=ExtResource( 3 )]
+margin_top = 132.0
+margin_bottom = 164.0
+rect_scale = Vector2( 1, 1 )

@@ -1,15 +1,17 @@
 extends Spatial
 
+signal changed_selection(selected)
+
 
 onready var camera = get_node("Camera")
-onready var buttons = get_node("CanvasLayer/TextureRect/Aspect/Buttons")
-onready var prev = get_node("CanvasLayer/TextureRect/Aspect/Buttons/Prev")
-onready var next = get_node("CanvasLayer/TextureRect/Aspect/Buttons/Next")
+onready var buttons = get_node("CanvasLayer/Buttons")
+onready var prev = get_node("CanvasLayer/Buttons/Prev")
+onready var next = get_node("CanvasLayer/Buttons/Next")
 
 var level_path = preload("res://scenes/Main.tscn")
 
 var players
-var selected = 1
+var selected setget _set_selection
 var start_pos
 var destination
 var moving = false
@@ -23,11 +25,12 @@ func _ready() -> void:
 	players = get_node("Players").get_child_count()
 	print(players)
 	start_pos = camera.translation
+	_set_selection(1)
+	
 	
 
 
 func _process(delta: float) -> void:
-	$CanvasLayer/TextureRect.set_size(get_viewport().size)
 	button_focus()
 	if moving:
 		move_camera()
@@ -45,7 +48,6 @@ func button_disable():
 		next.release_focus()
 	else:
 		next.set_disabled(false)
-		
 
 
 func button_focus():
@@ -53,6 +55,13 @@ func button_focus():
 		if button.is_hovered() and button.disabled == false:
 			button.grab_focus()
 
+
+func _set_selection(value):
+	var prev_value = value
+
+	if prev_value != selected:
+		selected = value
+		emit_signal("changed_selection", selected)
 
 
 func move_camera():
@@ -67,7 +76,7 @@ func move_camera():
 
 func _on_Next_pressed() -> void:
 	if selected != players:
-		selected += 1
+		_set_selection(selected + 1)
 		destination = camera.translation - move_amount
 		moving = true
 		button_disable()
@@ -75,7 +84,7 @@ func _on_Next_pressed() -> void:
 
 func _on_Prev_pressed() -> void:
 	if selected != 1:
-		selected -=1
+		_set_selection(selected - 1)
 		destination = camera.translation + move_amount
 		moving = true
 		button_disable()
@@ -84,3 +93,4 @@ func _on_Prev_pressed() -> void:
 func _on_Start_pressed() -> void:
 	GameData.current_player = selected
 	get_tree().change_scene_to(level_path)
+
