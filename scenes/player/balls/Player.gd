@@ -17,13 +17,16 @@ onready var point_scene = preload("res://scenes/player/weapons/JetCage.tscn")
 
 var cursor_pos = Vector3.ZERO
 
-var speed = 15
+
 var health = max_health setget _set_health
+var grounded = false
+var dead = true
 var hurt = false
 var respawn = false
 var Cage = null
 var start_pos
 
+export var speed = 15
 export(int) var max_health setget _set_max_health
 var type = Cages.JET
 
@@ -42,7 +45,7 @@ func _physics_process(delta):
 		var plane_speed = Vector2(linear_velocity.x, linear_velocity.z)
 		var dir = get_2d_dir(Cage.global_transform.origin, Cage.Pos.global_transform.origin)
 		_engine_sound(get_speed(plane_speed))
-		if Input.get_action_strength("move") > 0:
+		if Input.get_action_strength("move") > 0 and grounded:
 
 	#		camera_pos.rotation_degrees.y = lerp(camera_pos.rotation_degrees.y, Pointer.rotation_degrees.y, 0.02)
 			apply_central_impulse(Vector3(speed*dir.x, 0 , speed*dir.y))

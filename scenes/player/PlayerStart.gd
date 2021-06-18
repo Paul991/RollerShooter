@@ -1,7 +1,7 @@
 extends Position3D
 
 
-enum Balls {GOLDBALL, FIREBALL}
+enum Balls {FIREBALL, GOLDBALL}
 enum Frames {DEFAULT, ROUND, JET}
 
 export(Balls) var ball = Balls.GOLDBALL
@@ -17,8 +17,18 @@ var fireball_scn = load("res://scenes/player/balls/FirePlayer.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	_set_player()
 	_match_ball()
 
+
+func _set_player():
+	match GameData.current_player:
+		1:
+			ball = Balls.FIREBALL
+		2:
+			ball = Balls.GOLDBALL
+		null:
+			pass
 
 func _match_cage(player):
 	match frame:

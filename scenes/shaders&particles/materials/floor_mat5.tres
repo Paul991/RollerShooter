@@ -4,16 +4,10 @@
 [ext_resource path="res://assets/textures/pack/Tile_01_Big_A_Lite.png" type="Texture" id=2]
 
 [resource]
-albedo_color = Color( 0.819608, 0, 0, 1 )
+albedo_color = Color( 0.921569, 0.160784, 0.160784, 1 )
 albedo_texture = ExtResource( 2 )
-roughness = 0.6
-emission_enabled = true
-emission = Color( 0.686275, 0.196078, 0.196078, 1 )
-emission_energy = 0.1
-emission_operator = 0
-emission_on_uv2 = false
 normal_enabled = true
-normal_scale = 5.0
+normal_scale = -5.0
 normal_texture = ExtResource( 1 )
 uv1_scale = Vector3( 0.016, 0.016, 0.016 )
 uv1_triplanar = true

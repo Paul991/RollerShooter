@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/ui/Orbitron-Medium.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = SubResource( 1 )
+
+[node name="Label" type="Label"]
+margin_left = -244.862
+margin_right = -84.8623
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 2 )
+text = "SPEED"
+__meta__ = {
+"_edit_use_anchors_": false
+}

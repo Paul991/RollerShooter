@@ -1,0 +1,114 @@
+[gd_scene load_steps=8 format=2]
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.8, 0.596078, 0.180392, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.133333, 0.0823529, 0.0823529, 1 )
+border_blend = true
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 18
+expand_margin_top = 5.0
+shadow_color = Color( 0.156863, 0.109804, 0.109804, 0.6 )
+shadow_size = 8
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.54902, 0, 0, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.203922, 0.113725, 0.113725, 1 )
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 18
+expand_margin_top = 5.0
+shadow_color = Color( 0.156863, 0.109804, 0.109804, 0.6 )
+shadow_size = 4
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.686275, 0.462745, 0.00392157, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.133333, 0.0823529, 0.0823529, 1 )
+border_blend = true
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 18
+expand_margin_top = 5.0
+shadow_color = Color( 0.156863, 0.109804, 0.109804, 0.6 )
+shadow_size = 8
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.470588, 0.470588, 0.470588, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.203922, 0.113725, 0.113725, 1 )
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 18
+expand_margin_top = 5.0
+shadow_color = Color( 0.156863, 0.109804, 0.109804, 0.6 )
+shadow_size = 4
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.215686, 0.313726, 0.411765, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.203922, 0.113725, 0.113725, 1 )
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 18
+expand_margin_top = 5.0
+shadow_color = Color( 0.156863, 0.109804, 0.109804, 0.6 )
+shadow_size = 4
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://assets/ui/Orbitron-Medium.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+outline_size = 1
+outline_color = Color( 0.117647, 0.101961, 0.101961, 1 )
+use_filter = true
+font_data = SubResource( 7 )
+
+[node name="Start" type="Button"]
+margin_left = 550.889
+margin_top = 663.727
+margin_right = 727.889
+margin_bottom = 729.727
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+custom_fonts/font = SubResource( 8 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}

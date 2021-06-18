@@ -25,6 +25,8 @@ func _physics_process(delta):
 		var dir = get_2d_dir(global_transform.origin, Player.global_transform.origin)
 		
 		apply_central_impulse(Vector3(speed*dir.x, 0 , speed*dir.y))
+	if saw != null:
+		saw.translation = translation
 
 
 

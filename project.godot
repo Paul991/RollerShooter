@@ -14,6 +14,10 @@ config/name="RollerShooter"
 run/main_scene="res://scenes/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameData="*res://scenes/Autoload/GameData.tscn"
+
 [display]
 
 window/size/width=1280
