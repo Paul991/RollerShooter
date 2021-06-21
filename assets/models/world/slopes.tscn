@@ -8,10 +8,10 @@
 [ext_resource path="res://scenes/shaders&particles/materials/world_mat.tres" type="Material" id=11]
 [ext_resource path="res://scenes/world/Body.tscn" type="PackedScene" id=12]
 
-[sub_resource type="SpatialMaterial" id=1]
+[sub_resource type="SpatialMaterial" id=122]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=2]
+[sub_resource type="ArrayMesh" id=123]
 resource_name = "SteepCorner"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 50, 50 ),
@@ -20,19 +20,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 1 ),
+"material": SubResource( 122 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=3]
+[sub_resource type="ConvexPolygonShape" id=40]
 points = PoolVector3Array( -25, -25, 25, 25, 25, 25, -25, 25, -25, -25, -25, -25, -25, -25, -25, -25, 25, -25, 25, 25, -25, 25, -25, -25, 25, -25, -25, 25, 25, -25, 25, 25, 25, 25, -25, 25, 25, -25, 25, 25, 25, 25, 25, 25, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 25, -25, -25, 25, -25, 25, 25, 25, 25, 25, 25 )
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=124]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=5]
+[sub_resource type="ArrayMesh" id=125]
 resource_name = "Steep"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 50, 50 ),
@@ -41,19 +41,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 4 ),
+"material": SubResource( 124 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=6]
+[sub_resource type="ConvexPolygonShape" id=36]
 points = PoolVector3Array( -25, -25, 25, -25, 25, 25, -25, 25, 25, -25, -25, -25, -25, -25, -25, -25, 25, 25, 25, 25, 25, 25, -25, -25, 25, -25, -25, 25, 25, 25, 25, 25, 25, 25, -25, 25, 25, -25, 25, 25, 25, 25, -25, 25, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 25, 25, -25, 25, 25, -25, 25, 25, 25, 25, 25 )
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=126]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=8]
+[sub_resource type="ArrayMesh" id=127]
 resource_name = "SteepCornerOut"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 50, 50 ),
@@ -62,19 +62,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 7 ),
+"material": SubResource( 126 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=9]
+[sub_resource type="ConvexPolygonShape" id=56]
 points = PoolVector3Array( 0, -25, 0, 25, -25, 25, -25, -25, -25, -25, -25, -25, -25, -25, -25, -25, -25, -25, 25, 25, -25, 25, -25, -25, 25, -25, -25, 25, 25, -25, 25, -25, 25, 25, -25, 25, 25, -25, 25, 25, -25, 25, 25, -25, 25, 0, -25, 0, -25, -25, -25, 25, -25, -25, 25, -25, 25, 0, -25, 0, 25, 25, -25, -25, -25, -25, 25, -25, 25, 25, -25, 25 )
 
-[sub_resource type="SpatialMaterial" id=10]
+[sub_resource type="SpatialMaterial" id=128]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=11]
+[sub_resource type="ArrayMesh" id=129]
 resource_name = "FlatCorner"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 50, 50 ),
@@ -83,19 +83,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 10 ),
+"material": SubResource( 128 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 23
 }
 
-[sub_resource type="ConvexPolygonShape" id=12]
+[sub_resource type="ConvexPolygonShape" id=60]
 points = PoolVector3Array( -25, -25, 25, -25, 25, 25, -25, 25, -25, -25, -25, -25, -25, -25, -25, -25, 25, -25, -25, 25, -25, -25, -25, -25, -25, -25, -25, -25, 25, -25, 25, 25, 25, 25, -25, 25, 25, -25, 25, 25, 25, 25, -25, 25, 25, -25, -25, 25, -25, -25, -25, -25, -25, -25, 25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 25, 25, 25 )
 
-[sub_resource type="SpatialMaterial" id=13]
+[sub_resource type="SpatialMaterial" id=130]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=14]
+[sub_resource type="ArrayMesh" id=131]
 resource_name = "SmallCorner4"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 50, 50 ),
@@ -104,19 +104,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 13 ),
+"material": SubResource( 130 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=15]
-points = PoolVector3Array( -25, -25, 25, -25, 25, 25, -25, 25, -25, -25, -25, -25, -25, -25, -25, -25, 25, -25, 25, 12.5, -25, 25, -25, -25, 25, -25, -25, 25, 12.5, -25, 25, 25, 25, 25, -25, 25, 25, -25, 25, 25, 25, 25, -25, 25, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 12.5, -25, -25, 25, -25, -25, 25, 25, 25, 25, 25 )
+[sub_resource type="ConcavePolygonShape" id=28]
+data = PoolVector3Array( -25, -25, 25, -25, 25, -25, -25, 25, 25, -25, -25, 25, -25, -25, -25, -25, 25, -25, -25, -25, -25, 25, 12.5, -25, -25, 25, -25, -25, -25, -25, 25, -25, -25, 25, 12.5, -25, 25, -25, -25, 25, 25, 25, 25, 12.5, -25, 25, -25, -25, 25, -25, 25, 25, 25, 25, 25, -25, 25, -25, 25, 25, 25, 25, 25, 25, -25, 25, -25, -25, 25, -25, 25, 25, -25, -25, -25, 25, -25, 25, 25, -25, -25, -25, -25, -25, -25, -25, 25, 25, -25, 25, 25, 12.5, -25, -25, 25, 25, -25, 25, -25, 25, 12.5, -25, 25, 25, 25, -25, 25, 25 )
 
-[sub_resource type="SpatialMaterial" id=16]
+[sub_resource type="SpatialMaterial" id=132]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=17]
+[sub_resource type="ArrayMesh" id=133]
 resource_name = "Small4"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 50, 50 ),
@@ -125,19 +125,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 16 ),
+"material": SubResource( 132 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=18]
+[sub_resource type="ConvexPolygonShape" id=12]
 points = PoolVector3Array( -25, -25, 25, -25, 25, 25, -25, 12.5, -25, -25, -25, -25, -25, -25, -25, -25, 12.5, -25, 25, 12.5, -25, 25, -25, -25, 25, -25, -25, 25, 12.5, -25, 25, 25, 25, 25, -25, 25, 25, -25, 25, 25, 25, 25, -25, 25, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 12.5, -25, -25, 12.5, -25, -25, 25, 25, 25, 25, 25 )
 
-[sub_resource type="SpatialMaterial" id=19]
+[sub_resource type="SpatialMaterial" id=134]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=20]
+[sub_resource type="ArrayMesh" id=135]
 resource_name = "SmallCornerOut4"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 50, 50 ),
@@ -146,19 +146,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 19 ),
+"material": SubResource( 134 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=21]
+[sub_resource type="ConvexPolygonShape" id=64]
 points = PoolVector3Array( -25, -25, 25, -25, 25, 25, -25, 12.5, -25, -25, -25, -25, -25, -25, -25, -25, 12.5, -25, 25, 12.5, -25, 25, -25, -25, 25, -25, -25, 25, 12.5, -25, 25, 12.5, 25, 25, -25, 25, 25, -25, 25, 25, 12.5, 25, -25, 25, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 12.5, -25, -25, 12.5, -25, -25, 25, 25, 25, 12.5, 25 )
 
-[sub_resource type="SpatialMaterial" id=22]
+[sub_resource type="SpatialMaterial" id=136]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=23]
+[sub_resource type="ArrayMesh" id=137]
 resource_name = "Cube"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 50, 50 ),
@@ -167,19 +167,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 22 ),
+"material": SubResource( 136 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=24]
+[sub_resource type="ConvexPolygonShape" id=97]
 points = PoolVector3Array( -25, -25, 25, -25, 25, 25, -25, 25, -25, -25, -25, -25, -25, -25, -25, -25, 25, -25, 25, 25, -25, 25, -25, -25, 25, -25, -25, 25, 25, -25, 25, 25, 25, 25, -25, 25, 25, -25, 25, 25, 25, 25, -25, 25, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 25, -25, -25, 25, -25, -25, 25, 25, 25, 25, 25 )
 
-[sub_resource type="SpatialMaterial" id=25]
+[sub_resource type="SpatialMaterial" id=138]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=26]
+[sub_resource type="ArrayMesh" id=139]
 resource_name = "HalfCube"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 25, 50 ),
@@ -188,19 +188,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 25 ),
+"material": SubResource( 138 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=27]
+[sub_resource type="ConvexPolygonShape" id=101]
 points = PoolVector3Array( -25, -25, 25, -25, 0, 25, -25, 0, -25, -25, -25, -25, -25, -25, -25, -25, 0, -25, 25, 0, -25, 25, -25, -25, 25, -25, -25, 25, 0, -25, 25, 0, 25, 25, -25, 25, 25, -25, 25, 25, 0, 25, -25, 0, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 0, -25, -25, 0, -25, -25, 0, 25, 25, 0, 25 )
 
-[sub_resource type="SpatialMaterial" id=28]
+[sub_resource type="SpatialMaterial" id=140]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=29]
+[sub_resource type="ArrayMesh" id=141]
 resource_name = "Medium1"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 25, 50 ),
@@ -209,19 +209,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 28 ),
+"material": SubResource( 140 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=30]
+[sub_resource type="ConvexPolygonShape" id=105]
 points = PoolVector3Array( -25, -25, 25, -25, 0, 25, -25, 0, 25, -25, -25, -25, -25, -25, -25, -25, 0, 25, 25, 0, 25, 25, -25, -25, 25, -25, -25, 25, 0, 25, 25, 0, 25, 25, -25, 25, 25, -25, 25, 25, 0, 25, -25, 0, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 0, 25, -25, 0, 25, -25, 0, 25, 25, 0, 25 )
 
-[sub_resource type="SpatialMaterial" id=31]
+[sub_resource type="SpatialMaterial" id=142]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=32]
+[sub_resource type="ArrayMesh" id=143]
 resource_name = "CornerMedium2"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 50, 50 ),
@@ -230,19 +230,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 31 ),
+"material": SubResource( 142 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=33]
-points = PoolVector3Array( -25, -25, 25, -25, 25, 25, -25, 25, -25, -25, -25, -25, -25, -25, -25, -25, 25, -25, 25, 0, -25, 25, -25, -25, 25, -25, -25, 25, 0, -25, 25, 25, 25, 25, -25, 25, 25, -25, 25, 25, 25, 25, -25, 25, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 0, -25, -25, 25, -25, -25, 25, 25, 25, 25, 25 )
+[sub_resource type="ConcavePolygonShape" id=8]
+data = PoolVector3Array( -25, -25, 25, -25, 25, -25, -25, 25, 25, -25, -25, 25, -25, -25, -25, -25, 25, -25, -25, -25, -25, 25, 0, -25, -25, 25, -25, -25, -25, -25, 25, -25, -25, 25, 0, -25, 25, -25, -25, 25, 25, 25, 25, 0, -25, 25, -25, -25, 25, -25, 25, 25, 25, 25, 25, -25, 25, -25, 25, 25, 25, 25, 25, 25, -25, 25, -25, -25, 25, -25, 25, 25, -25, -25, -25, 25, -25, 25, 25, -25, -25, -25, -25, -25, -25, -25, 25, 25, -25, 25, 25, 0, -25, -25, 25, 25, -25, 25, -25, 25, 0, -25, 25, 25, 25, -25, 25, 25 )
 
-[sub_resource type="SpatialMaterial" id=34]
+[sub_resource type="SpatialMaterial" id=144]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=35]
+[sub_resource type="ArrayMesh" id=145]
 resource_name = "Medium2"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 50, 50 ),
@@ -251,19 +251,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 34 ),
+"material": SubResource( 144 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=36]
+[sub_resource type="ConvexPolygonShape" id=109]
 points = PoolVector3Array( -25, -25, 25, -25, 25, 25, -25, 0, -25, -25, -25, -25, -25, -25, -25, -25, 0, -25, 25, 0, -25, 25, -25, -25, 25, -25, -25, 25, 0, -25, 25, 25, 25, 25, -25, 25, 25, -25, 25, 25, 25, 25, -25, 25, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 0, -25, -25, 0, -25, -25, 25, 25, 25, 25, 25 )
 
-[sub_resource type="SpatialMaterial" id=37]
+[sub_resource type="SpatialMaterial" id=146]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=38]
+[sub_resource type="ArrayMesh" id=147]
 resource_name = "CornerMedium"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 25, 50 ),
@@ -272,19 +272,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 37 ),
+"material": SubResource( 146 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=39]
-points = PoolVector3Array( -25, -25, 25, -25, 0, 25, -25, 0, -25, -25, -25, -25, -25, -25, -25, -25, 0, -25, 25, -25, -25, 25, -25, -25, 25, -25, -25, 25, -25, -25, 25, 0, 25, 25, -25, 25, 25, -25, 25, 25, 0, 25, -25, 0, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, -25, -25, -25, 0, -25, -25, 0, 25, 25, 0, 25 )
+[sub_resource type="ConcavePolygonShape" id=52]
+data = PoolVector3Array( -25, -25, 25, -25, 0, -25, -25, 0, 25, -25, -25, 25, -25, -25, -25, -25, 0, -25, -25, -25, -25, 25, -25, -25, -25, 0, -25, -25, -25, -25, 25, -25, -25, 25, -25, -25, 25, -25, -25, 25, 0, 25, 25, -25, -25, 25, -25, -25, 25, -25, 25, 25, 0, 25, 25, -25, 25, -25, 0, 25, 25, 0, 25, 25, -25, 25, -25, -25, 25, -25, 0, 25, -25, -25, -25, 25, -25, 25, 25, -25, -25, -25, -25, -25, -25, -25, 25, 25, -25, 25, 25, -25, -25, -25, 0, 25, -25, 0, -25, 25, -25, -25, 25, 0, 25, -25, 0, 25 )
 
-[sub_resource type="SpatialMaterial" id=40]
+[sub_resource type="SpatialMaterial" id=148]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=41]
+[sub_resource type="ArrayMesh" id=149]
 resource_name = "HalfCorner"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 25, 50 ),
@@ -293,19 +293,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 40 ),
+"material": SubResource( 148 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 23
 }
 
-[sub_resource type="ConvexPolygonShape" id=42]
+[sub_resource type="ConvexPolygonShape" id=68]
 points = PoolVector3Array( -25, -25, 25, -25, 0, 25, -25, 0, -25, -25, -25, -25, -25, -25, -25, -25, 0, -25, -25, 0, -25, -25, -25, -25, -25, -25, -25, -25, 0, -25, 25, 0, 25, 25, -25, 25, 25, -25, 25, 25, 0, 25, -25, 0, 25, -25, -25, 25, -25, -25, -25, -25, -25, -25, 25, -25, 25, -25, -25, 25, -25, 0, -25, -25, 0, 25, 25, 0, 25 )
 
-[sub_resource type="SpatialMaterial" id=43]
+[sub_resource type="SpatialMaterial" id=150]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=44]
+[sub_resource type="ArrayMesh" id=151]
 resource_name = "CornerMediumOut"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 25, 50 ),
@@ -314,19 +314,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 43 ),
+"material": SubResource( 150 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 22
 }
 
-[sub_resource type="ConvexPolygonShape" id=45]
+[sub_resource type="ConvexPolygonShape" id=44]
 points = PoolVector3Array( -25, -25, 25, -25, 0, 25, -25, -25, -25, -25, -25, -25, -25, -25, -25, -25, -25, -25, 25, -25, -25, 25, -25, -25, 25, -25, 25, 25, -25, 25, 25, -25, 25, 25, -25, 25, -25, 0, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, -25, -25, -25, -25, -25, -25, 0, 25, 25, -25, 25 )
 
-[sub_resource type="SpatialMaterial" id=46]
+[sub_resource type="SpatialMaterial" id=152]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=47]
+[sub_resource type="ArrayMesh" id=153]
 resource_name = "CornerMediumOut2"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 50, 50 ),
@@ -335,7 +335,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 46 ),
+"material": SubResource( 152 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -344,10 +344,10 @@ surfaces/0 = {
 [sub_resource type="ConvexPolygonShape" id=48]
 points = PoolVector3Array( -25, -25, 25, -25, 25, 25, -25, 0, -25, -25, -25, -25, -25, -25, -25, -25, 0, -25, 25, 0, -25, 25, -25, -25, 25, -25, -25, 25, 0, -25, 25, 0, 25, 25, -25, 25, 25, -25, 25, 25, 0, 25, -25, 25, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 0, -25, -25, 0, -25, -25, 25, 25, 25, 0, 25 )
 
-[sub_resource type="SpatialMaterial" id=49]
+[sub_resource type="SpatialMaterial" id=154]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=50]
+[sub_resource type="ArrayMesh" id=155]
 resource_name = "QuartCube"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 12.5, 50 ),
@@ -356,19 +356,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 49 ),
+"material": SubResource( 154 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=51]
+[sub_resource type="ConvexPolygonShape" id=113]
 points = PoolVector3Array( -25, -25, 25, -25, -12.5, 25, -25, -12.5, -25, -25, -25, -25, -25, -25, -25, -25, -12.5, -25, 25, -12.5, -25, 25, -25, -25, 25, -25, -25, 25, -12.5, -25, 25, -12.5, 25, 25, -25, 25, 25, -25, 25, 25, -12.5, 25, -25, -12.5, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, -12.5, -25, -25, -12.5, -25, -25, -12.5, 25, 25, -12.5, 25 )
 
-[sub_resource type="SpatialMaterial" id=52]
+[sub_resource type="SpatialMaterial" id=156]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=53]
+[sub_resource type="ArrayMesh" id=157]
 resource_name = "SmallCorner"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 12.5, 50 ),
@@ -377,20 +377,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 52 ),
+"material": SubResource( 156 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=54]
-points = PoolVector3Array( -25, -25, 25, -25, -12.5, 25, -25, -12.5, -25, -25, -25, -25, -25, -25, -25, -25, -12.5, -25, 25, -25, -25, 25, -25, -25, 25, -25, -25, 25, -25, -25, 25, -12.5, 25, 25, -25, 25, 25, -25, 25, 25, -12.5, 25, -25, -12.5, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, -25, -25, -25, -12.5, -25, -25, -12.5, 25, 25, -12.5, 25 )
+[sub_resource type="ConcavePolygonShape" id=32]
+data = PoolVector3Array( -25, -25, 25, -25, -12.5, -25, -25, -12.5, 25, -25, -25, 25, -25, -25, -25, -25, -12.5, -25, -25, -25, -25, 25, -25, -25, -25, -12.5, -25, -25, -25, -25, 25, -25, -25, 25, -25, -25, 25, -25, -25, 25, -12.5, 25, 25, -25, -25, 25, -25, -25, 25, -25, 25, 25, -12.5, 25, 25, -25, 25, -25, -12.5, 25, 25, -12.5, 25, 25, -25, 25, -25, -25, 25, -25, -12.5, 25, -25, -25, -25, 25, -25, 25, 25, -25, -25, -25, -25, -25, -25, -25, 25, 25, -25, 25, 25, -25, -25, -25, -12.5, 25, -25, -12.5, -25, 25, -25, -25, 25, -12.5, 25, -25, -12.5, 25 )
 
-[sub_resource type="SpatialMaterial" id=55]
+[sub_resource type="SpatialMaterial" id=158]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=56]
-resource_name = "Small"
+[sub_resource type="ArrayMesh" id=159]
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 12.5, 50 ),
 "array_data": PoolByteArray( 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 60, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 65, 129, 0, 0, 0, 0, 126, 0, 127, 0, 57, 0, 60, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 129, 0, 0, 0, 127, 0, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 57, 0, 58, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 225, 53, 241, 55, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 127, 0, 0, 0, 0, 127, 0, 127, 225, 53, 241, 55, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 127, 0, 0, 0, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 200, 65, 0, 0, 72, 193, 0, 0, 200, 65, 127, 0, 0, 0, 0, 126, 0, 127, 0, 57, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 72, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 129, 0, 0, 125, 0, 19, 127, 141, 48, 176, 54, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 0, 129, 0, 0, 121, 0, 38, 127, 225, 53, 241, 55, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 125, 0, 19, 127, 0, 54, 0, 52, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 0, 123, 226, 0, 129, 0, 0, 127, 0, 57, 0, 56, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 123, 226, 0, 129, 0, 0, 127, 0, 59, 0, 56, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 65, 0, 123, 226, 0, 129, 0, 0, 127, 0, 59, 0, 52, 0, 0, 200, 65, 0, 0, 72, 193, 0, 0, 200, 65, 0, 123, 226, 0, 129, 0, 0, 127, 0, 57, 0, 52 ),
@@ -398,19 +397,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 55 ),
+"material": SubResource( 158 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=57]
+[sub_resource type="ConvexPolygonShape" id=16]
 points = PoolVector3Array( -25, -25, 25, -25, -12.5, 25, -25, -25, -25, -25, -25, -25, -25, -25, -25, -25, -25, -25, 25, -25, -25, 25, -25, -25, 25, -25, -25, 25, -25, -25, 25, -12.5, 25, 25, -25, 25, 25, -25, 25, 25, -12.5, 25, -25, -12.5, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, -25, -25, -25, -25, -25, -25, -12.5, 25, 25, -12.5, 25 )
 
-[sub_resource type="SpatialMaterial" id=58]
+[sub_resource type="SpatialMaterial" id=160]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=59]
+[sub_resource type="ArrayMesh" id=161]
 resource_name = "SmallCorner2"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 25, 50 ),
@@ -419,19 +418,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 58 ),
+"material": SubResource( 160 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=60]
-points = PoolVector3Array( -25, -25, 25, -25, 0, 25, -25, 0, -25, -25, -25, -25, -25, -25, -25, -25, 0, -25, 25, -12.5, -25, 25, -25, -25, 25, -25, -25, 25, -12.5, -25, 25, 0, 25, 25, -25, 25, 25, -25, 25, 25, 0, 25, -25, 0, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, -12.5, -25, -25, 0, -25, -25, 0, 25, 25, 0, 25 )
+[sub_resource type="ConcavePolygonShape" id=20]
+data = PoolVector3Array( -25, -25, 25, -25, 0, -25, -25, 0, 25, -25, -25, 25, -25, -25, -25, -25, 0, -25, -25, -25, -25, 25, -12.5, -25, -25, 0, -25, -25, -25, -25, 25, -25, -25, 25, -12.5, -25, 25, -25, -25, 25, 0, 25, 25, -12.5, -25, 25, -25, -25, 25, -25, 25, 25, 0, 25, 25, -25, 25, -25, 0, 25, 25, 0, 25, 25, -25, 25, -25, -25, 25, -25, 0, 25, -25, -25, -25, 25, -25, 25, 25, -25, -25, -25, -25, -25, -25, -25, 25, 25, -25, 25, 25, -12.5, -25, -25, 0, 25, -25, 0, -25, 25, -12.5, -25, 25, 0, 25, -25, 0, 25 )
 
-[sub_resource type="SpatialMaterial" id=61]
+[sub_resource type="SpatialMaterial" id=162]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=62]
+[sub_resource type="ArrayMesh" id=163]
 resource_name = "Small2"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 25, 50 ),
@@ -440,19 +439,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 61 ),
+"material": SubResource( 162 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=63]
+[sub_resource type="ConvexPolygonShape" id=117]
 points = PoolVector3Array( -25, -25, 25, -25, 0, 25, -25, -12.5, -25, -25, -25, -25, -25, -25, -25, -25, -12.5, -25, 25, -12.5, -25, 25, -25, -25, 25, -25, -25, 25, -12.5, -25, 25, 0, 25, 25, -25, 25, 25, -25, 25, 25, 0, 25, -25, 0, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, -12.5, -25, -25, -12.5, -25, -25, 0, 25, 25, 0, 25 )
 
-[sub_resource type="SpatialMaterial" id=64]
+[sub_resource type="SpatialMaterial" id=164]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=65]
+[sub_resource type="ArrayMesh" id=165]
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 12.5, 50 ),
 "array_data": PoolByteArray( 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 60, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 65, 129, 0, 0, 0, 0, 126, 0, 127, 0, 57, 0, 60, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 129, 0, 0, 0, 127, 0, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 57, 0, 58, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 225, 53, 241, 55, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 127, 0, 0, 127, 0, 0, 127, 0, 57, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 127, 0, 0, 127, 0, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 127, 0, 0, 129, 0, 57, 0, 52, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 126, 0, 127, 0, 57, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 129, 0, 0, 125, 0, 19, 127, 141, 48, 176, 54, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 0, 129, 0, 0, 121, 0, 38, 127, 225, 53, 241, 55, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 125, 0, 19, 127, 0, 54, 0, 52, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 15, 125, 241, 0, 130, 15, 0, 127, 0, 57, 0, 56, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 15, 125, 241, 0, 130, 15, 255, 127, 0, 59, 0, 56, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 65, 15, 125, 241, 0, 130, 15, 0, 127, 0, 59, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 15, 125, 241, 0, 131, 15, 1, 127, 0, 57, 0, 52 ),
@@ -460,19 +459,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 64 ),
+"material": SubResource( 164 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 22
 }
 
-[sub_resource type="ConvexPolygonShape" id=66]
+[sub_resource type="ConvexPolygonShape" id=72]
 points = PoolVector3Array( -25, -25, 25, -25, -12.5, 25, -25, -25, -25, -25, -25, -25, -25, -25, -25, -25, -25, -25, 25, -25, -25, 25, -25, -25, 25, -25, 25, 25, -25, 25, 25, -25, 25, 25, -25, 25, -25, -12.5, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, -25, -25, -25, -25, -25, -25, -12.5, 25, 25, -25, 25 )
 
-[sub_resource type="SpatialMaterial" id=67]
+[sub_resource type="SpatialMaterial" id=166]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=68]
+[sub_resource type="ArrayMesh" id=167]
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 25, 50 ),
 "array_data": PoolByteArray( 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 60, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 200, 65, 129, 0, 0, 0, 0, 126, 0, 127, 0, 57, 0, 60, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 193, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 129, 0, 0, 127, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 193, 0, 0, 129, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 200, 65, 0, 0, 72, 193, 0, 0, 200, 193, 0, 0, 129, 0, 0, 127, 0, 127, 0, 57, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 129, 0, 0, 127, 0, 127, 0, 54, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 56, 0, 0, 200, 65, 0, 0, 72, 193, 0, 0, 200, 193, 127, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 56, 0, 0, 200, 65, 0, 0, 72, 193, 0, 0, 200, 65, 127, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 72, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 0, 129, 0, 0, 127, 0, 0, 127, 0, 54, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 54, 0, 52, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 52, 0, 0, 200, 65, 0, 0, 72, 193, 0, 0, 200, 193, 15, 125, 241, 0, 130, 15, 0, 127, 0, 57, 0, 56, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 193, 15, 125, 241, 0, 130, 15, 255, 127, 0, 59, 0, 56, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 200, 65, 15, 125, 241, 0, 130, 15, 0, 127, 0, 59, 0, 52, 0, 0, 200, 65, 0, 0, 72, 193, 0, 0, 200, 65, 15, 125, 241, 0, 131, 15, 1, 127, 0, 57, 0, 52 ),
@@ -480,19 +479,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 67 ),
+"material": SubResource( 166 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=69]
+[sub_resource type="ConvexPolygonShape" id=76]
 points = PoolVector3Array( -25, -25, 25, -25, 0, 25, -25, -12.5, -25, -25, -25, -25, -25, -25, -25, -25, -12.5, -25, 25, -12.5, -25, 25, -25, -25, 25, -25, -25, 25, -12.5, -25, 25, -12.5, 25, 25, -25, 25, 25, -25, 25, 25, -12.5, 25, -25, 0, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, -12.5, -25, -25, -12.5, -25, -25, 0, 25, 25, -12.5, 25 )
 
-[sub_resource type="SpatialMaterial" id=70]
+[sub_resource type="SpatialMaterial" id=168]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=71]
+[sub_resource type="ArrayMesh" id=169]
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 12.5, 50 ),
 "array_data": PoolByteArray( 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 60, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 65, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 60, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 193, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 57, 0, 58, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 193, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 0, 56, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 225, 53, 241, 55, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 89, 0, 167, 0, 6, 126, 6, 127, 225, 53, 241, 55, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 193, 89, 0, 167, 0, 6, 126, 6, 127, 0, 57, 0, 56, 0, 0, 200, 65, 0, 0, 72, 193, 0, 0, 200, 65, 89, 0, 167, 0, 0, 126, 0, 127, 0, 57, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 89, 0, 167, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 72, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 129, 0, 0, 127, 0, 0, 127, 141, 48, 176, 54, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 129, 0, 0, 127, 0, 0, 127, 225, 53, 241, 55, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 54, 0, 52, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 52, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 59, 0, 56, 0, 0, 200, 193, 0, 0, 72, 193, 0, 0, 200, 65, 0, 127, 0, 0, 129, 0, 0, 127, 0, 59, 0, 52, 0, 0, 200, 65, 0, 0, 72, 193, 0, 0, 200, 65, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 0, 52 ),
@@ -500,19 +499,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 70 ),
+"material": SubResource( 168 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 23
 }
 
-[sub_resource type="ConvexPolygonShape" id=72]
+[sub_resource type="ConvexPolygonShape" id=80]
 points = PoolVector3Array( -25, -25, 25, -25, -12.5, 25, -25, -12.5, -25, -25, -25, -25, -25, -25, -25, -25, -12.5, -25, -25, -12.5, -25, -25, -25, -25, -25, -25, -25, -25, -12.5, -25, 25, -12.5, 25, 25, -25, 25, 25, -25, 25, 25, -12.5, 25, -25, -12.5, 25, -25, -25, 25, -25, -25, -25, -25, -25, -25, 25, -25, 25, -25, -25, 25, -25, -12.5, -25, -25, -12.5, 25, 25, -12.5, 25 )
 
-[sub_resource type="SpatialMaterial" id=76]
+[sub_resource type="SpatialMaterial" id=170]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=77]
+[sub_resource type="ArrayMesh" id=171]
 resource_name = "3QuartCube"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 37.5, 50 ),
@@ -521,19 +520,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 76 ),
+"material": SubResource( 170 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=78]
+[sub_resource type="ConvexPolygonShape" id=4]
 points = PoolVector3Array( -25, -25, 25, -25, 12.5, 25, -25, 12.5, -25, -25, -25, -25, -25, -25, -25, -25, 12.5, -25, 25, 12.5, -25, 25, -25, -25, 25, -25, -25, 25, 12.5, -25, 25, 12.5, 25, 25, -25, 25, 25, -25, 25, 25, 12.5, 25, -25, 12.5, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 12.5, -25, -25, 12.5, -25, -25, 12.5, 25, 25, 12.5, 25 )
 
-[sub_resource type="SpatialMaterial" id=79]
+[sub_resource type="SpatialMaterial" id=172]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=80]
+[sub_resource type="ArrayMesh" id=173]
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 37.5, 50 ),
 "array_data": PoolByteArray( 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 60, 0, 0, 200, 193, 0, 0, 72, 65, 0, 0, 200, 65, 129, 0, 0, 0, 0, 126, 0, 127, 0, 57, 0, 60, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 200, 193, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 129, 0, 0, 127, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 200, 193, 0, 0, 129, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 200, 193, 0, 0, 129, 0, 0, 127, 0, 127, 0, 57, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 129, 0, 0, 127, 0, 127, 0, 54, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 56, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 200, 193, 127, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 56, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 200, 65, 127, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 200, 193, 0, 0, 72, 65, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 193, 0, 129, 0, 0, 127, 0, 0, 127, 0, 54, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 54, 0, 52, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 52, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 200, 193, 15, 125, 241, 0, 130, 15, 0, 127, 0, 57, 0, 56, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 200, 193, 15, 125, 241, 0, 130, 15, 255, 127, 0, 59, 0, 56, 0, 0, 200, 193, 0, 0, 72, 65, 0, 0, 200, 65, 15, 125, 241, 0, 130, 15, 0, 127, 0, 59, 0, 52, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 200, 65, 15, 125, 241, 0, 131, 15, 1, 127, 0, 57, 0, 52 ),
@@ -541,19 +540,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 79 ),
+"material": SubResource( 172 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=81]
+[sub_resource type="ConvexPolygonShape" id=84]
 points = PoolVector3Array( -25, -25, 25, -25, 12.5, 25, -25, 0, -25, -25, -25, -25, -25, -25, -25, -25, 0, -25, 25, 0, -25, 25, -25, -25, 25, -25, -25, 25, 0, -25, 25, 0, 25, 25, -25, 25, 25, -25, 25, 25, 0, 25, -25, 12.5, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 0, -25, -25, 0, -25, -25, 12.5, 25, 25, 0, 25 )
 
-[sub_resource type="SpatialMaterial" id=82]
+[sub_resource type="SpatialMaterial" id=174]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=83]
+[sub_resource type="ArrayMesh" id=175]
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 37.5, 50 ),
 "array_data": PoolByteArray( 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 60, 0, 0, 200, 193, 0, 0, 72, 65, 0, 0, 200, 65, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 60, 0, 0, 200, 193, 0, 0, 72, 65, 0, 0, 200, 193, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 72, 65, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 57, 0, 58, 0, 0, 200, 193, 0, 0, 72, 65, 0, 0, 200, 193, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 0, 56, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 54, 0, 56, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 89, 0, 167, 0, 0, 127, 0, 127, 0, 54, 0, 56, 0, 0, 200, 193, 0, 0, 72, 65, 0, 0, 200, 193, 89, 0, 167, 0, 0, 127, 0, 127, 0, 57, 0, 56, 0, 0, 200, 65, 0, 0, 72, 65, 0, 0, 200, 65, 89, 0, 167, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 89, 0, 167, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 72, 65, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 200, 193, 0, 0, 72, 65, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 56, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 193, 0, 129, 0, 0, 127, 0, 0, 127, 0, 54, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 54, 0, 52, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 52, 0, 0, 200, 193, 0, 0, 72, 65, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 59, 0, 56, 0, 0, 200, 193, 0, 0, 72, 65, 0, 0, 200, 65, 0, 127, 0, 0, 129, 0, 0, 127, 0, 59, 0, 52, 0, 0, 200, 65, 0, 0, 72, 65, 0, 0, 200, 65, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 0, 52 ),
@@ -561,19 +560,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 82 ),
+"material": SubResource( 174 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 23
 }
 
-[sub_resource type="ConvexPolygonShape" id=84]
+[sub_resource type="ConvexPolygonShape" id=88]
 points = PoolVector3Array( -25, -25, 25, -25, 12.5, 25, -25, 12.5, -25, -25, -25, -25, -25, -25, -25, -25, 12.5, -25, -25, 12.5, -25, -25, -25, -25, -25, -25, -25, -25, 12.5, -25, 25, 12.5, 25, 25, -25, 25, 25, -25, 25, 25, 12.5, 25, -25, 12.5, 25, -25, -25, 25, -25, -25, -25, -25, -25, -25, 25, -25, 25, -25, -25, 25, -25, 12.5, -25, -25, 12.5, 25, 25, 12.5, 25 )
 
-[sub_resource type="SpatialMaterial" id=85]
+[sub_resource type="SpatialMaterial" id=176]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=86]
+[sub_resource type="ArrayMesh" id=177]
 resource_name = "Small3"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 37.5, 50 ),
@@ -582,19 +581,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 85 ),
+"material": SubResource( 176 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=87]
+[sub_resource type="ConvexPolygonShape" id=121]
 points = PoolVector3Array( -25, -25, 25, -25, 12.5, 25, -25, 0, -25, -25, -25, -25, -25, -25, -25, -25, 0, -25, 25, 0, -25, 25, -25, -25, 25, -25, -25, 25, 0, -25, 25, 12.5, 25, 25, -25, 25, 25, -25, 25, 25, 12.5, 25, -25, 12.5, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 0, -25, -25, 0, -25, -25, 12.5, 25, 25, 12.5, 25 )
 
-[sub_resource type="SpatialMaterial" id=73]
+[sub_resource type="SpatialMaterial" id=178]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=74]
+[sub_resource type="ArrayMesh" id=179]
 resource_name = "SmallCorner3"
 surfaces/0 = {
 "aabb": AABB( -25, -25, -25, 50, 37.5, 50 ),
@@ -603,20 +602,19 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 73 ),
+"material": SubResource( 178 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="ConvexPolygonShape" id=75]
-points = PoolVector3Array( -25, -25, 25, -25, 12.5, 25, -25, 12.5, -25, -25, -25, -25, -25, -25, -25, -25, 12.5, -25, 25, 0, -25, 25, -25, -25, 25, -25, -25, 25, 0, -25, 25, 12.5, 25, 25, -25, 25, 25, -25, 25, 25, 12.5, 25, -25, 12.5, 25, -25, -25, 25, -25, -25, -25, 25, -25, -25, 25, -25, 25, -25, -25, 25, 25, 0, -25, -25, 12.5, -25, -25, 12.5, 25, 25, 12.5, 25 )
+[sub_resource type="ConcavePolygonShape" id=24]
+data = PoolVector3Array( -25, -25, 25, -25, 12.5, -25, -25, 12.5, 25, -25, -25, 25, -25, -25, -25, -25, 12.5, -25, -25, -25, -25, 25, 0, -25, -25, 12.5, -25, -25, -25, -25, 25, -25, -25, 25, 0, -25, 25, -25, -25, 25, 12.5, 25, 25, 0, -25, 25, -25, -25, 25, -25, 25, 25, 12.5, 25, 25, -25, 25, -25, 12.5, 25, 25, 12.5, 25, 25, -25, 25, -25, -25, 25, -25, 12.5, 25, -25, -25, -25, 25, -25, 25, 25, -25, -25, -25, -25, -25, -25, -25, 25, 25, -25, 25, 25, 0, -25, -25, 12.5, 25, -25, 12.5, -25, 25, 0, -25, 25, 12.5, 25, -25, 12.5, 25 )
 
-[sub_resource type="SpatialMaterial" id=155]
+[sub_resource type="SpatialMaterial" id=180]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="ArrayMesh" id=156]
-resource_name = "Edge"
+[sub_resource type="ArrayMesh" id=181]
 surfaces/0 = {
 "aabb": AABB( -25, -25, 20, 50, 25, 5.00001 ),
 "array_data": PoolByteArray( 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 60, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 200, 65, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 60, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 160, 65, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 160, 65, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 160, 65, 0, 0, 129, 0, 0, 127, 0, 127, 0, 54, 0, 58, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 160, 65, 0, 0, 129, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 160, 65, 0, 0, 129, 0, 0, 127, 0, 127, 0, 57, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 160, 65, 0, 0, 129, 0, 0, 127, 0, 127, 0, 54, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 160, 65, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 56, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 160, 65, 127, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 56, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 200, 65, 127, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 0, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 160, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 160, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 54, 0, 56, 0, 0, 200, 65, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 54, 0, 52, 0, 0, 200, 193, 0, 0, 200, 193, 0, 0, 200, 65, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 52, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 160, 65, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 0, 56, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 160, 65, 0, 127, 0, 0, 129, 0, 0, 127, 0, 59, 0, 56, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 200, 65, 0, 127, 0, 0, 129, 0, 0, 127, 0, 59, 0, 52, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 200, 65, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 0, 52 ),
@@ -624,13 +622,13 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 36,
-"material": SubResource( 155 ),
+"material": SubResource( 180 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
 
-[sub_resource type="SpatialMaterial" id=154]
+[sub_resource type="SpatialMaterial" id=89]
 albedo_color = Color( 0.431373, 1, 1, 1 )
 albedo_texture = ExtResource( 1 )
 normal_enabled = true
@@ -639,7 +637,7 @@ normal_texture = ExtResource( 1 )
 uv1_scale = Vector3( 0.03, 0.03, 0.03 )
 uv1_triplanar = true
 
-[sub_resource type="ConvexPolygonShape" id=157]
+[sub_resource type="ConvexPolygonShape" id=93]
 points = PoolVector3Array( -25, -25, 25, -25, 0, 25, -25, 0, 20, -25, -25, 20, -25, -25, 20, -25, 0, 20, 25, 0, 20, 25, -25, 20, 25, -25, 20, 25, 0, 20, 25, 0, 25, 25, -25, 25, 25, -25, 25, 25, 0, 25, -25, 0, 25, -25, -25, 25, -25, -25, 20, 25, -25, 20, 25, -25, 25, -25, -25, 25, 25, 0, 20, -25, 0, 20, -25, 0, 25, 25, 0, 25 )
 
 [node name="Slopes" type="Spatial"]
@@ -647,106 +645,104 @@ points = PoolVector3Array( -25, -25, 25, -25, 0, 25, -25, 0, 20, -25, -25, 20, -
 [node name="SteepCorner" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 2 )
+mesh = SubResource( 123 )
 material/0 = ExtResource( 6 )
 
 [node name="StaticBody" parent="SteepCorner" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="SteepCorner/StaticBody"]
-shape = SubResource( 3 )
+shape = SubResource( 40 )
 
 [node name="Steep" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 5 )
+mesh = SubResource( 125 )
 material/0 = ExtResource( 6 )
 
 [node name="StaticBody" parent="Steep" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="Steep/StaticBody"]
-shape = SubResource( 6 )
+shape = SubResource( 36 )
 
 [node name="SteepCornerOut" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
-visible = false
-mesh = SubResource( 8 )
+mesh = SubResource( 127 )
 material/0 = ExtResource( 6 )
 
 [node name="StaticBody" parent="SteepCornerOut" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="SteepCornerOut/StaticBody"]
-shape = SubResource( 9 )
+shape = SubResource( 56 )
 
 [node name="CubeCorner" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
-visible = false
-mesh = SubResource( 11 )
+mesh = SubResource( 129 )
 material/0 = ExtResource( 6 )
 
 [node name="StaticBody" parent="CubeCorner" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="CubeCorner/StaticBody"]
-shape = SubResource( 12 )
+shape = SubResource( 60 )
 
 [node name="SmallCorner4" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 14 )
+mesh = SubResource( 131 )
 material/0 = ExtResource( 8 )
 
 [node name="StaticBody" parent="SmallCorner4" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="SmallCorner4/StaticBody"]
-shape = SubResource( 15 )
+shape = SubResource( 28 )
 
 [node name="Small4" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 17 )
+mesh = SubResource( 133 )
 material/0 = ExtResource( 8 )
 
 [node name="StaticBody" parent="Small4" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="Small4/StaticBody"]
-shape = SubResource( 18 )
+shape = SubResource( 12 )
 
 [node name="SmallCornerOut4" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 20 )
+mesh = SubResource( 135 )
 material/0 = ExtResource( 8 )
 
 [node name="StaticBody" parent="SmallCornerOut4" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="SmallCornerOut4/StaticBody"]
-shape = SubResource( 21 )
+shape = SubResource( 64 )
 
 [node name="Cube" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 23 )
+mesh = SubResource( 137 )
 material/0 = ExtResource( 6 )
 
 [node name="StaticBody" parent="Cube" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="Cube/StaticBody"]
-shape = SubResource( 24 )
+shape = SubResource( 97 )
 
 [node name="HalfCube" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 26 )
+mesh = SubResource( 139 )
 material/0 = ExtResource( 10 )
 
 [node name="StaticBody" parent="HalfCube" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="HalfCube/StaticBody"]
-shape = SubResource( 27 )
+shape = SubResource( 101 )
 
 [node name="Medium1" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 29 )
+mesh = SubResource( 141 )
 material/0 = ExtResource( 10 )
 
 [node name="StaticBody" parent="Medium1" instance=ExtResource( 12 )]
@@ -754,67 +750,67 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -25, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Medium1/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
-shape = SubResource( 30 )
+shape = SubResource( 105 )
 
 [node name="CornerMedium2" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 32 )
+mesh = SubResource( 143 )
 material/0 = ExtResource( 10 )
 
 [node name="StaticBody" parent="CornerMedium2" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="CornerMedium2/StaticBody"]
-shape = SubResource( 33 )
+shape = SubResource( 8 )
 
 [node name="Medium2" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 35 )
+mesh = SubResource( 145 )
 material/0 = ExtResource( 10 )
 
 [node name="StaticBody" parent="Medium2" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="Medium2/StaticBody"]
-shape = SubResource( 36 )
+shape = SubResource( 109 )
 
 [node name="CornerMedium" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 38 )
+mesh = SubResource( 147 )
 material/0 = ExtResource( 10 )
 
 [node name="StaticBody" parent="CornerMedium" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="CornerMedium/StaticBody"]
-shape = SubResource( 39 )
+shape = SubResource( 52 )
 
 [node name="HalfCorner" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 41 )
+mesh = SubResource( 149 )
 material/0 = ExtResource( 10 )
 
 [node name="StaticBody" parent="HalfCorner" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="HalfCorner/StaticBody"]
-shape = SubResource( 42 )
+shape = SubResource( 68 )
 
 [node name="CornerMediumOut" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 44 )
+mesh = SubResource( 151 )
 material/0 = ExtResource( 10 )
 
 [node name="StaticBody" parent="CornerMediumOut" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="CornerMediumOut/StaticBody"]
-shape = SubResource( 45 )
+shape = SubResource( 44 )
 
 [node name="CornerMediumOut2" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 47 )
+mesh = SubResource( 153 )
 material/0 = ExtResource( 10 )
 
 [node name="StaticBody" parent="CornerMediumOut2" instance=ExtResource( 12 )]
@@ -825,51 +821,51 @@ shape = SubResource( 48 )
 [node name="QuartCube" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 50 )
+mesh = SubResource( 155 )
 material/0 = ExtResource( 11 )
 
 [node name="StaticBody" parent="QuartCube" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="QuartCube/StaticBody"]
-shape = SubResource( 51 )
+shape = SubResource( 113 )
 
 [node name="SmallCorner" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 53 )
+mesh = SubResource( 157 )
 material/0 = ExtResource( 11 )
 
 [node name="StaticBody" parent="SmallCorner" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="SmallCorner/StaticBody"]
-shape = SubResource( 54 )
+shape = SubResource( 32 )
 
 [node name="Small" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 56 )
+mesh = SubResource( 159 )
 material/0 = ExtResource( 11 )
 
 [node name="StaticBody" parent="Small" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="Small/StaticBody"]
-shape = SubResource( 57 )
+shape = SubResource( 16 )
 
 [node name="SmallCorner2" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 59 )
+mesh = SubResource( 161 )
 material/0 = ExtResource( 11 )
 
 [node name="StaticBody" parent="SmallCorner2" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="SmallCorner2/StaticBody"]
-shape = SubResource( 60 )
+shape = SubResource( 20 )
 
 [node name="Small2" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 62 )
+mesh = SubResource( 163 )
 material/0 = ExtResource( 11 )
 
 [node name="StaticBody" parent="Small2" instance=ExtResource( 12 )]
@@ -877,101 +873,103 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -25, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Small2/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
-shape = SubResource( 63 )
+shape = SubResource( 117 )
 
 [node name="SmallCornerout" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 65 )
+mesh = SubResource( 165 )
 material/0 = ExtResource( 11 )
 
 [node name="StaticBody" parent="SmallCornerout" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="SmallCornerout/StaticBody"]
-shape = SubResource( 66 )
+shape = SubResource( 72 )
 
 [node name="SmallCornerOut2" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 68 )
+mesh = SubResource( 167 )
 material/0 = ExtResource( 11 )
 
 [node name="StaticBody" parent="SmallCornerOut2" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="SmallCornerOut2/StaticBody"]
-shape = SubResource( 69 )
+shape = SubResource( 76 )
 
 [node name="QuartCorner" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 71 )
+mesh = SubResource( 169 )
 material/0 = ExtResource( 11 )
 
 [node name="StaticBody" parent="QuartCorner" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="QuartCorner/StaticBody"]
-shape = SubResource( 72 )
+shape = SubResource( 80 )
 
 [node name="3QuartCube" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 77 )
+mesh = SubResource( 171 )
 material/0 = ExtResource( 7 )
 
 [node name="StaticBody" parent="3QuartCube" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="3QuartCube/StaticBody"]
-shape = SubResource( 78 )
+shape = SubResource( 4 )
 
 [node name="SmallCornerOut3" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 80 )
+mesh = SubResource( 173 )
 material/0 = ExtResource( 7 )
 
 [node name="StaticBody" parent="SmallCornerOut3" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="SmallCornerOut3/StaticBody"]
-shape = SubResource( 81 )
+shape = SubResource( 84 )
 
 [node name="3QuartCorner" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 83 )
+mesh = SubResource( 175 )
 material/0 = ExtResource( 7 )
 
 [node name="StaticBody" parent="3QuartCorner" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="3QuartCorner/StaticBody"]
-shape = SubResource( 84 )
+shape = SubResource( 88 )
 
 [node name="Small3" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
-mesh = SubResource( 86 )
+visible = false
+mesh = SubResource( 177 )
 material/0 = ExtResource( 7 )
 
 [node name="StaticBody" parent="Small3" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="Small3/StaticBody"]
-shape = SubResource( 87 )
+shape = SubResource( 121 )
 
 [node name="SmallCorner3" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
 visible = false
-mesh = SubResource( 74 )
+mesh = SubResource( 179 )
 material/0 = ExtResource( 7 )
 
 [node name="StaticBody" parent="SmallCorner3" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="SmallCorner3/StaticBody"]
-shape = SubResource( 75 )
+shape = SubResource( 24 )
 
 [node name="Edge" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 5 )
-mesh = SubResource( 156 )
-material/0 = SubResource( 154 )
+visible = false
+mesh = SubResource( 181 )
+material/0 = SubResource( 89 )
 
 [node name="StaticBody" parent="Edge" instance=ExtResource( 12 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="Edge/StaticBody"]
-shape = SubResource( 157 )
+shape = SubResource( 93 )

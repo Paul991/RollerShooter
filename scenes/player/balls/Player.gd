@@ -126,7 +126,7 @@ func _engine_sound(value):
 	var current_speed = value
 	if current_speed > 1:
 		$Sfx/Engine.set_pitch_scale(current_speed/100+1.5)
-		print(current_speed)
+#		print(current_speed)
 
 		if $Sfx/Engine.is_playing() == false:
 				$Sfx/Engine.play()

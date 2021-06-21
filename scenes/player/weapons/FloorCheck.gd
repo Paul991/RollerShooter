@@ -18,7 +18,7 @@ func align_with_y(xform, new_y):
 func _process(delta: float) -> void:
 	if is_colliding():
 		parent.Player.grounded = true
-		print("grounded") # maybe i have to make the ground check spin with frame
+#		print("grounded") # maybe i have to make the ground check spin with frame
 		var r = parent.rotation_degrees.y
 		var n = self.get_collision_normal()
 		var xform = align_with_y(parent.global_transform, n)
