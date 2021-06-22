@@ -61,7 +61,9 @@ uv1_triplanar = true
 audio_stream = ExtResource( 4 )
 random_pitch = 1.45
 
-[node name="GoldPlayer" type="RigidBody"]
+[node name="GoldPlayer" type="RigidBody" groups=[
+"Player",
+]]
 collision_layer = 17
 collision_mask = 2
 mass = 4.0

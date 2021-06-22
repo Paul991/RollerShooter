@@ -15,6 +15,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.505188, -3.8147e-06, -0.1984
 use_collision = true
 collision_layer = 2
 width = 663.975
-height = 145.59
+height = 100.0
 depth = 24.3887
 material = SubResource( 1 )
