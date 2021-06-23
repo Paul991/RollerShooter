@@ -12,5 +12,5 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if parent != null:
-
+		translation = parent.translation
 		rotation_degrees.y -= 20

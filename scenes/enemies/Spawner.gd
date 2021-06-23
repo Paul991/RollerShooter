@@ -69,7 +69,7 @@ func _spawn_enemy(tip):
 	e.translation = tip.global_transform.origin
 	e.apply_impulse(global_transform.origin, Vector3(speed*dir.x, 0, speed*dir.y))
 
-	print(e.translation)
+
 
 func get_2d_dir(from, to):
 	var dir = Vector2.ZERO

@@ -4,6 +4,7 @@ extends Spatial
 
 onready var gamecues = $GameCues/AnimationPlayer
 onready var enemies = get_tree().get_nodes_in_group("Enemy").size() 
+onready var path = get_node("Path")
 
 
 export var timer = 0
