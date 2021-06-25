@@ -19,7 +19,7 @@ size = 30
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=4]
 resource_name = "game_lost"
 loop = true
 tracks/0/type = "value"
@@ -59,7 +59,7 @@ tracks/2/keys = {
 "values": [ "" ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterContainer/VBoxContainer/MainLabel:text")
@@ -85,8 +85,20 @@ tracks/1/keys = {
 "update": 1,
 "values": [ "Press R to restart", "" ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("TimeLabel:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "" ]
+}
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterContainer/VBoxContainer/MainLabel:text")
@@ -136,8 +148,20 @@ tracks/3/keys = {
 "update": 1,
 "values": [ "" ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("TimeLabel:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "" ]
+}
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterContainer/VBoxContainer/MainLabel:text")
@@ -229,8 +253,7 @@ tracks/6/keys = {
 "values": [ Vector2( 880, 472 ) ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "start_timer"
+[sub_resource type="Animation" id=8]
 tracks/0/type = "value"
 tracks/0/path = NodePath("TimeLabel:custom_fonts/font:size")
 tracks/0/interp = 1
@@ -295,23 +318,23 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 574.0
+margin_left = 647.0
 margin_top = 462.0
-margin_right = 1345.0
+margin_right = 1272.0
 margin_bottom = 617.0
 
 [node name="MainLabel" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 771.0
+margin_right = 625.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 2 )
-text = "Times Out!"
+text = "you win!"
 align = 1
 valign = 1
 uppercase = true
 
 [node name="InstructionLabel" type="Label" parent="CenterContainer/VBoxContainer"]
 margin_top = 124.0
-margin_right = 771.0
+margin_right = 625.0
 margin_bottom = 155.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0.592157, 0.592157, 1 )
@@ -320,11 +343,11 @@ align = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "start"
-anims/game_lost = SubResource( 8 )
-anims/game_won = SubResource( 4 )
-anims/start = SubResource( 5 )
-anims/start_game = SubResource( 6 )
-anims/start_timer = SubResource( 7 )
+anims/game_lost = SubResource( 4 )
+anims/game_won = SubResource( 5 )
+anims/start = SubResource( 6 )
+anims/start_game = SubResource( 7 )
+anims/start_timer = SubResource( 8 )
 
 [node name="Count" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

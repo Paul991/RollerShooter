@@ -63,7 +63,10 @@ func get_2d_dir(from, to):
 	return dir
 
 func _death():
+	var main = get_parent().get_parent()
+	main.gamecues.change_time(1)
 	saw.queue_free()
+	
 	queue_free()
 
 func _set_health(value):

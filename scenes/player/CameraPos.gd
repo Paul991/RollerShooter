@@ -13,7 +13,8 @@ var cursor_pos = Vector3.ZERO
 
 
 func _ready() -> void:
-	 Player = get_parent().player
+	rotation_degrees = get_parent().get_node("PlayerStart").rotation_degrees
+	Player = get_parent().player
 
 
 func _physics_process(delta):

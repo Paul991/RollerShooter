@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/race/RaceManagement.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player/PlayerStart.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/world/GridMapFloor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/world/DeadZone.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/ui/GameCues.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/player/Camera.gd" type="Script" id=6]
 [ext_resource path="res://scenes/Main.gd" type="Script" id=7]
@@ -10,18 +11,18 @@
 [ext_resource path="res://scenes/enemies/EnemyRaceBall.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/world/GridMapOver.tscn" type="PackedScene" id=10]
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 100, 100, 10 )
 
-[sub_resource type="BoxShape" id=4]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 100, 100, 10 )
 
-[sub_resource type="PhysicsMaterial" id=1]
+[sub_resource type="PhysicsMaterial" id=3]
 resource_local_to_scene = true
 rough = true
 bounce = 0.2
 
-[sub_resource type="Curve3D" id=2]
+[sub_resource type="Curve3D" id=4]
 bake_interval = 50.0
 _data = {
 "points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -73.9811, -2.63519, 1115.49, 40.9998, 0, 41.9368, -40.9998, 0, -41.9368, -278.515, 0, 1087.95, 0, 0, 0, 0, 0, 0, -260.035, 0, 991.849, 0, 0, 0, 0, 0, 0, 102.181, 0, 622.241, 0, 0, 0, 0, 0, 0, 113.269, 0, 245.241, 0, 0, 0, 0, 0, 0, 110.41, 0, 64.9445, 52.0598, 0, 59.9128, -52.0598, 0, -59.9128, 29.5713, 0, -98.7809, 44.0793, 0, -58.3923, -44.0793, 0, 58.3923, -145.34, 0, -107.589, 0, 0, 0, 0, 0, 0, -208.29, 0, 12.3881, -33.5642, 0, -81.0042, 33.5642, 0, 81.0042, -204.594, 0, 260.025, -25.5271, 0, -95.681, 25.5271, 0, 95.681, 294.377, 0, 740.515, 48.8779, 0, -41.2103, -48.8779, 0, 41.2103, 286.984, 0, 1106.43, 0, 0, 0, 0, 0, 0, -71.7783, 0, 1116.55 ),
@@ -33,22 +34,23 @@ script = ExtResource( 7 )
 race = true
 
 [node name="RaceManagement" parent="." instance=ExtResource( 1 )]
+laps = 1
 
 [node name="StartLine" parent="RaceManagement/Gates" index="0"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 110.564, 1111.88 )
 time_bonus = 10
 
 [node name="CollisionShape" type="CollisionShape" parent="RaceManagement/Gates/StartLine" index="0"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="CheckPoint" parent="RaceManagement/Gates" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -207.802, 0, 128.487 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RaceManagement/Gates/CheckPoint" index="0"]
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="PlayerStart" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 186.244, 133.005, 1125.25 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 186.244, 133.005, 1125.25 )
 
 [node name="World" type="Spatial" parent="."]
 
@@ -75,38 +77,43 @@ data = {
 
 [node name="EnemyBall" parent="Enemies" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112.413, 121.024, 1102.83 )
-physics_material_override = SubResource( 1 )
+physics_material_override = SubResource( 3 )
 
 [node name="EnemyBall2" parent="Enemies" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112.413, 121.024, 1056.19 )
-physics_material_override = SubResource( 1 )
+physics_material_override = SubResource( 3 )
 
 [node name="EnemyBall3" parent="Enemies" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3783, 121.024, 1056.19 )
-physics_material_override = SubResource( 1 )
+physics_material_override = SubResource( 3 )
 
 [node name="EnemyBall4" parent="Enemies" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3783, 121.024, 1116.57 )
-physics_material_override = SubResource( 1 )
+physics_material_override = SubResource( 3 )
 
 [node name="EnemyBall5" parent="Enemies" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5564, 121.024, 1116.57 )
-physics_material_override = SubResource( 1 )
+physics_material_override = SubResource( 3 )
 
 [node name="EnemyBall6" parent="Enemies" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5564, 121.024, 1063.25 )
-physics_material_override = SubResource( 1 )
+physics_material_override = SubResource( 3 )
 
 [node name="EnemyBall7" parent="Enemies" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.9145, 121.024, 1063.25 )
-physics_material_override = SubResource( 1 )
+physics_material_override = SubResource( 3 )
 
 [node name="EnemyBall8" parent="Enemies" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.9145, 121.024, 1110.71 )
-physics_material_override = SubResource( 1 )
+physics_material_override = SubResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.248003, -0.909855, 0.332654, 0.666988, 0.0886668, 0.739774, -0.702582, 0.405342, 0.584873, -23.712, 64.9239, -4.52955 )
+shadow_enabled = true
+directional_shadow_max_distance = 200.0
 
 [node name="CameraPos" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 120.198, 221.829, 1095.07 )
 script = ExtResource( 8 )
 
 [node name="Camera" type="Camera" parent="CameraPos"]
@@ -118,15 +125,12 @@ near = 15.0
 far = 8192.0
 script = ExtResource( 6 )
 
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( -0.248003, -0.909855, 0.332654, 0.666988, 0.0886668, 0.739774, -0.702582, 0.405342, 0.584873, -23.712, 64.9239, -4.52955 )
-shadow_enabled = true
-directional_shadow_max_distance = 200.0
-
 [node name="GameCues" parent="." instance=ExtResource( 5 )]
 
 [node name="Path" type="Path" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 300, 0 )
-curve = SubResource( 2 )
+curve = SubResource( 4 )
+
+[node name="DeadZone" parent="." instance=ExtResource( 4 )]
 
 [editable path="RaceManagement"]

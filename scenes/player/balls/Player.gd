@@ -8,6 +8,7 @@ enum Cages {ROUND, JET}
 signal health_updated(health)
 signal max_health_updated(max_health)
 
+onready var main = get_parent()
 onready var camera = get_parent().get_node("CameraPos/Camera")
 onready var camera_pos = get_parent().get_node("CameraPos")
 onready var round_scene = preload("res://scenes/player/weapons/RoundCage.tscn")
@@ -41,7 +42,7 @@ func _ready():
 ##	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _physics_process(delta):
-	if Cage != null and !get_parent().defeat: # gotta make a autoload for the gamestates
+	if Cage != null and !main.defeat: # gotta make a autoload for the gamestates
 		var plane_speed = Vector2(linear_velocity.x, linear_velocity.z)
 		var dir = get_2d_dir(Cage.global_transform.origin, Cage.Pos.global_transform.origin)
 		_engine_sound(get_speed(plane_speed))
@@ -88,6 +89,8 @@ func _spawn_cage():
 	get_parent().call_deferred("add_child", a)
 	yield(get_tree(), "idle_frame")
 	Cage = a
+	Cage.rotation_degrees = rotation_degrees
+
 
 func _integrate_forces(state):
 	if respawn:

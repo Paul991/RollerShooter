@@ -60,5 +60,6 @@ func _match_ball():
 			b = goldball_scn.instance()
 	get_parent().call_deferred("add_child", b)
 	b.translation = global_transform.origin
+	b.rotation_degrees = rotation_degrees
 	_match_cage(b)
 	get_parent().player = b

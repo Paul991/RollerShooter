@@ -17,7 +17,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	update_timer()
 	if parent.victory:
-		anim_player.play("game_won")
+		counter.stop()
+		anim_player.queue("game_won")
 
 
 func update_timer():
@@ -32,11 +33,12 @@ func start_timer():
 
 
 func change_time(value):
-	var current_time = counter.get_time_left()
-	var new_time = current_time + value
-	counter.stop()
-	counter.set_wait_time(new_time)
-	counter.start()
+	if !parent.defeat and !parent.victory:
+		var current_time = counter.get_time_left()
+		var new_time = current_time + value
+		counter.stop()
+		counter.set_wait_time(new_time)
+		counter.start()
 
 
 func pause():
