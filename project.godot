@@ -52,6 +52,7 @@ restart={
 3d_physics/layer_3="Enemies"
 3d_physics/layer_4="Collectibles"
 3d_physics/layer_5="Bullets"
+3d_physics/layer_6="Saws"
 
 [physics]
 

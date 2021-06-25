@@ -3,6 +3,8 @@ extends Area
 
 onready var parent = get_parent()
 
+var impulse = 30
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,4 +23,4 @@ func get_2d_dir(from, to):
 func _on_Hurtbox_body_entered(body: Node) -> void:
 	if body.is_in_group("Saws"): # not really doing it
 		var dir = get_2d_dir(body.global_transform.origin, global_transform.origin)
-		parent.apply_impulse(body.global_transform.origin, Vector3(dir.x*50, 0, dir.y*50))
+		parent.apply_impulse(body.global_transform.origin, Vector3(dir.x*impulse, 0, dir.y*impulse))

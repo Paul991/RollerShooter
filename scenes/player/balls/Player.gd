@@ -41,7 +41,7 @@ func _ready():
 ##	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _physics_process(delta):
-	if Cage != null:
+	if Cage != null and !get_parent().defeat: # gotta make a autoload for the gamestates
 		var plane_speed = Vector2(linear_velocity.x, linear_velocity.z)
 		var dir = get_2d_dir(Cage.global_transform.origin, Cage.Pos.global_transform.origin)
 		_engine_sound(get_speed(plane_speed))

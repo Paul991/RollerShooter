@@ -14,7 +14,7 @@ var saw
 
 var cursor_pos = Vector3.ZERO
 
-var speed = 100
+var speed = 25
 var health = max_health setget _set_health
 
 
@@ -30,15 +30,20 @@ func _physics_process(delta):
 	if patrol_path != null:
 		var target = patrol_points[patrol_index]
 		var dir = get_2d_dir(global_transform.origin, target)
-		if translation.distance_to(target) < 30:
+		var dist = get_distance_2d(translation, target)
+		if dist < 50:
 			patrol_index = wrapi(patrol_index + 1, 0, patrol_points.size())
-			print(patrol_points.size())
+#			print(patrol_points.size())
 			target = patrol_points[patrol_index]
-			print("Patrol index: %s" % patrol_index)
+#			print("Patrol index: %s" % patrol_index)
 		
 		apply_central_impulse(Vector3(speed*dir.x, 0 , speed*dir.y))
 
 
+func get_distance_2d(a, b):
+	a.y = 0
+	b.y = 0
+	return a.distance_to(b)
 
 
 func add_saw():
