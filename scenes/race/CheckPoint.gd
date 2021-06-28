@@ -17,6 +17,7 @@ func _ready() -> void:
 
 
 func _on_CheckPoint_body_entered(body: Node) -> void:
+	var player = parent.main.player
 	print(id, parent.gate_count, parent.last_gate)
 	if parent.last_gate == null:
 		parent.last_gate = id
@@ -33,4 +34,7 @@ func _on_CheckPoint_body_entered(body: Node) -> void:
 			parent.last_gate = id
 			print(parent.last_gate)
 			parent.main.gamecues.change_time(time_bonus)
+	player.start_pos = translation
+	player.start_rot = rotation_degrees
+
 	print(id, parent.gate_count, parent.last_gate)

@@ -18,3 +18,4 @@ func _ready() -> void:
 
 func _on_DeadZone_body_entered(body: Node) -> void:
 	body.health -= 1000
+	get_parent().gamecues.change_time(-1)

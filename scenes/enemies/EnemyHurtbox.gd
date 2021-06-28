@@ -3,7 +3,7 @@ extends Area
 
 onready var parent = get_parent()
 
-var impulse = 30
+var impulse = 20
 
 
 # Called when the node enters the scene tree for the first time.

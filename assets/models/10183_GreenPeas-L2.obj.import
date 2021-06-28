@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/10183_GreenPeas-L2.obj-d9bd514bd5614ff80dcd08d0fb1af9c1.mesh"
+
+[deps]
+
+files=[ "res://.import/10183_GreenPeas-L2.obj-d9bd514bd5614ff80dcd08d0fb1af9c1.mesh" ]
+
+source_file="res://assets/models/10183_GreenPeas-L2.obj"
+dest_files=[ "res://.import/10183_GreenPeas-L2.obj-d9bd514bd5614ff80dcd08d0fb1af9c1.mesh", "res://.import/10183_GreenPeas-L2.obj-d9bd514bd5614ff80dcd08d0fb1af9c1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

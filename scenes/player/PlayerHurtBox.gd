@@ -24,7 +24,7 @@ func damage(value):
 func _on_HurtBox_body_entered(body: Node) -> void:
 	if body.is_in_group("Saws"): # not really doing it
 		var dir = parent.get_2d_dir(body.global_transform.origin, global_transform.origin)
-		parent.apply_impulse(body.global_transform.origin, Vector3(dir.x*50, 0, dir.y*50))
+		parent.apply_impulse(body.global_transform.origin, Vector3(dir.x*20, 0, dir.y*20))
 		damage(50)
 	if "EnemyBallSimple" in body.name:
 		damage(20)

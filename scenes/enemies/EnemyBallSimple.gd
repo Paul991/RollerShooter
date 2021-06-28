@@ -9,7 +9,6 @@ onready var timer = $Timer
 export var max_health = 100
 
 var move_vector = Vector2.ZERO
-var cursor_pos = Vector3.ZERO
 var health = max_health setget _set_health
 var speed = 20
 var rng = RandomNumberGenerator.new()

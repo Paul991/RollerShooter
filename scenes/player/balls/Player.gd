@@ -26,6 +26,7 @@ var hurt = false
 var respawn = false
 var Cage = null
 var start_pos
+var start_rot
 
 export var speed = 15
 export(int) var max_health setget _set_max_health
@@ -36,6 +37,7 @@ func _ready():
 	_spawn_cage()
 	_set_max_health(max_health)
 	start_pos = translation
+	rotation_degrees = start_rot
 
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 #	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
@@ -97,9 +99,12 @@ func _integrate_forces(state):
 		var t = state.get_transform()   
 		t.origin = start_pos
 		respawn = false
+		Cage.rotation_degrees = start_rot
+		camera_pos.rotation_degrees = start_rot
 		state.set_transform(t)
-
-
+		
+		
+		
 func get_speed(value: Vector2): # sort of
 
 	if abs(value.x) > abs(value.y):

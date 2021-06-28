@@ -186,8 +186,8 @@ data = {
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 133.961, -179.595 )
-light_color = Color( 0.505882, 0.517647, 0.0588235, 1 )
 shadow_enabled = true
+directional_shadow_max_distance = 120.0
 
 [connection signal="changed_selection" from="." to="CanvasLayer/Stats" method="_on_PlayerSelect_changed_selection"]
 [connection signal="pressed" from="CanvasLayer/Buttons/Prev" to="." method="_on_Prev_pressed"]

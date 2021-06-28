@@ -74,7 +74,7 @@ func move_camera():
 	
 
 
-func _on_Next_pressed() -> void:
+func _on_Next_pressed() -> void: 
 	if selected != players:
 		_set_selection(selected + 1)
 		destination = camera.translation - move_amount

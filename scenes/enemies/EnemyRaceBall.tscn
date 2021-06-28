@@ -6,6 +6,7 @@
 
 [sub_resource type="PhysicsMaterial" id=1]
 resource_local_to_scene = true
+friction = 0.5
 rough = true
 bounce = 0.2
 
@@ -58,5 +59,10 @@ material/0 = SubResource( 4 )
 
 [node name="CollisionShape" parent="Hurtbox" index="0"]
 shape = SubResource( 5 )
+
+[node name="RespawnTime" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="RespawnTime" to="." method="_on_RespawnTime_timeout"]
 
 [editable path="Hurtbox"]
