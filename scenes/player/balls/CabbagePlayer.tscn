@@ -1,0 +1,88 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/player/balls/Player.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ui/healthbar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/player/PlayerHurtBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/sfx/AlienWeapon4.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sfx/Alarm4.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/models/Cabbage.jpg" type="Texture" id=7]
+[ext_resource path="res://assets/models/12209_Vegetable_v1_L3.obj" type="ArrayMesh" id=8]
+
+[sub_resource type="PhysicsMaterial" id=1]
+resource_local_to_scene = true
+rough = true
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.47451, 0.611765, 0.443137, 1 )
+albedo_texture = ExtResource( 7 )
+
+[sub_resource type="SphereShape" id=2]
+radius = 7.0
+
+[sub_resource type="AudioStreamRandomPitch" id=8]
+audio_stream = ExtResource( 5 )
+random_pitch = 1.45
+
+[node name="CabbagePlayer" type="RigidBody" groups=[
+"Player",
+]]
+collision_layer = 17
+collision_mask = 2
+mass = 4.0
+physics_material_override = SubResource( 1 )
+gravity_scale = 27.0
+can_sleep = false
+linear_damp = 0.5
+angular_damp = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+speed = 20
+max_health = 400
+
+[node name="Cabbage" type="MeshInstance" parent="."]
+mesh = ExtResource( 8 )
+material/0 = SubResource( 9 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
+
+[node name="BulletCooldown" type="Timer" parent="."]
+wait_time = 0.07
+one_shot = true
+
+[node name="Sfx" type="Spatial" parent="."]
+
+[node name="Shoot" type="AudioStreamPlayer3D" parent="Sfx"]
+stream = SubResource( 8 )
+unit_db = 30.0
+
+[node name="Engine" type="AudioStreamPlayer3D" parent="Sfx"]
+stream = ExtResource( 6 )
+unit_db = 30.0
+bus = "Effects"
+
+[node name="HurtBox" parent="." instance=ExtResource( 4 )]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="healthbar" parent="UI" instance=ExtResource( 3 )]
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="HealthUnder" parent="UI/healthbar" index="0"]
+max_value = 400.0
+value = 400.0
+
+[node name="HealthOver" parent="UI/healthbar" index="1"]
+max_value = 400.0
+value = 400.0
+tint_progress = Color( 0, 0.564706, 0, 1 )
+
+[connection signal="health_updated" from="." to="UI/healthbar" method="_on_health_updated"]
+[connection signal="max_health_updated" from="." to="UI/healthbar" method="_on_max_health_updated"]
+
+[editable path="UI/healthbar"]

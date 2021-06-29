@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/shaders&particles/ExplosionParticle.gd" type="Script" id=1]
+[ext_resource path="res://assets/sfx/AlienWeapon1.wav" type="AudioStream" id=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.116592, 0.221973, 0.320628, 0.41704, 0.542601, 0.600897, 0.706278, 0.82287, 0.950673, 1 )
+colors = PoolColorArray( 0.929688, 0.0844411, 0.0844411, 1, 0.354528, 0.937885, 0.191188, 1, 0.945295, 0.68841, 0.28767, 1, 0.39594, 0.377995, 0.952232, 1, 0.959011, 0.466266, 0.928214, 1, 0.928574, 0.967839, 0.581224, 1, 0.634597, 0.971938, 0.718933, 1, 0.0579509, 0.123405, 0.550781, 1, 0.439748, 1, 0.750513, 1, 0.519531, 0.156984, 0.108859, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 0.25
+flag_align_y = true
+flag_rotate_y = true
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 0.29
+angular_velocity = 4.19
+angular_velocity_random = 0.2
+linear_accel = 23.38
+linear_accel_random = 1.0
+radial_accel = -9.68
+radial_accel_random = 0.35
+angle = 336.8
+angle_random = 0.66
+color_ramp = SubResource( 2 )
+hue_variation = 0.77
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0, 0.564706, 0, 1 )
+roughness = 0.0
+emission_enabled = true
+emission = Color( 0.490196, 1, 0.172549, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="CubeMesh" id=5]
+material = SubResource( 4 )
+
+[sub_resource type="AudioStreamRandomPitch" id=6]
+audio_stream = ExtResource( 2 )
+
+[node name="Particles" type="Particles"]
+transform = Transform( 1, 0, 0, 0, -0.0158294, 0.999875, 0, -0.999875, -0.0158294, 0, 0, 0 )
+emitting = false
+amount = 50
+lifetime = 0.4
+one_shot = true
+explosiveness = 1.0
+visibility_aabb = AABB( -17.6569, -20.4744, -14.8153, 35.3137, 40.9487, 29.6306 )
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Impact" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource( 6 )
+unit_db = 40.0
+max_db = 5.759
+max_distance = 1000.0

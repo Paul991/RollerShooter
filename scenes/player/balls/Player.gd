@@ -1,7 +1,7 @@
 extends RigidBody
 
 
-enum Cages {ROUND, JET}
+enum Cages {ROUND, JET, GARDEN}
 
 
 
@@ -12,7 +12,8 @@ onready var main = get_parent()
 onready var camera = get_parent().get_node("CameraPos/Camera")
 onready var camera_pos = get_parent().get_node("CameraPos")
 onready var round_scene = preload("res://scenes/player/weapons/RoundCage.tscn")
-onready var point_scene = preload("res://scenes/player/weapons/JetCage.tscn")
+onready var jet_scene = preload("res://scenes/player/weapons/JetCage.tscn")
+onready var garden_scene = preload("res://scenes/player/weapons/GardenCage.tscn")
 
 
 
@@ -33,7 +34,7 @@ export(int) var max_health setget _set_max_health
 var type = Cages.JET
 
 func _ready():
-#	get_parent().player = self
+
 	_spawn_cage()
 	_set_max_health(max_health)
 	start_pos = translation
@@ -83,13 +84,18 @@ func _spawn_cage():
 	match type:
 		Cages.JET:
 			$BulletCooldown.set_wait_time(0.15)
-			a = point_scene.instance()
+			a = jet_scene.instance()
 		Cages.ROUND:
-			$BulletCooldown.set_wait_time(0.07)
+			$BulletCooldown.set_wait_time(0.1)
 			a = round_scene.instance()
+		Cages.GARDEN:
+			$BulletCooldown.set_wait_time(0.05)
+			a = garden_scene.instance()
 	print(a.name)
+	
 	get_parent().call_deferred("add_child", a)
 	yield(get_tree(), "idle_frame")
+	a.Player = self
 	Cage = a
 	Cage.rotation_degrees = rotation_degrees
 
