@@ -6,7 +6,7 @@ onready var Right = get_node("Right")
 onready var Pos = get_node("Pos")
 onready var Push = get_node("Push")
 
-var bullet_scene = preload("res://scenes/player/weapons/RoundBullet.tscn")
+var bullet_scene = preload("res://scenes/player/weapons/CarrotBullet.tscn")
 
 
 

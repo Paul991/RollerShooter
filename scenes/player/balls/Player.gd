@@ -83,13 +83,13 @@ func _spawn_cage():
 	var a
 	match type:
 		Cages.JET:
-			$BulletCooldown.set_wait_time(0.15)
+			$BulletCooldown.set_wait_time(0.2)
 			a = jet_scene.instance()
 		Cages.ROUND:
-			$BulletCooldown.set_wait_time(0.1)
+			$BulletCooldown.set_wait_time(0.15)
 			a = round_scene.instance()
 		Cages.GARDEN:
-			$BulletCooldown.set_wait_time(0.05)
+			$BulletCooldown.set_wait_time(0.07)
 			a = garden_scene.instance()
 	print(a.name)
 	

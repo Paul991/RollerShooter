@@ -1,9 +1,8 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/textures/Metal_Rusted_Diffuse_2.png" type="Texture" id=1]
 [ext_resource path="res://assets/textures/effects/push.png" type="Texture" id=2]
 [ext_resource path="res://scenes/shaders&particles/materials/pipes_gold_mat.tres" type="Material" id=3]
-[ext_resource path="res://scenes/shaders&particles/materials/rect_bullet.tres" type="Material" id=4]
 
 [sub_resource type="SphereMesh" id=1]
 radius = 6.0
@@ -49,12 +48,22 @@ uv1_triplanar = true
 [sub_resource type="CubeMesh" id=6]
 size = Vector3( 2, 4, 1.5 )
 
-[sub_resource type="StreamTexture" id=7]
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0, 0.564706, 0, 1 )
+metallic = 0.54
+roughness = 0.4
+emission_enabled = true
+emission = Color( 0, 0.211765, 0.462745, 1 )
+emission_energy = 2.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="StreamTexture" id=8]
 flags = 23
 load_path = "res://.import/Metal_Rusted_Diffuse_2.png-3332fa99c432b3f97c88e53356186b6a.s3tc.stex"
 
-[sub_resource type="SpatialMaterial" id=8]
-albedo_texture = SubResource( 7 )
+[sub_resource type="SpatialMaterial" id=9]
+albedo_texture = SubResource( 8 )
 metallic = 1.0
 roughness = 0.59
 normal_enabled = true
@@ -62,47 +71,67 @@ normal_scale = 1.47
 uv1_scale = Vector3( 0.05, 0.05, 0.05 )
 uv1_triplanar = true
 
-[sub_resource type="CylinderMesh" id=9]
-material = SubResource( 8 )
+[sub_resource type="CylinderMesh" id=10]
+material = SubResource( 9 )
 top_radius = 13.0
 bottom_radius = 13.0
 height = 1.0
 
-[sub_resource type="CylinderMesh" id=10]
+[sub_resource type="CylinderMesh" id=11]
 material = ExtResource( 3 )
 top_radius = 12.0
 bottom_radius = 12.0
 height = 1.0
 
-[sub_resource type="CubeMesh" id=11]
+[sub_resource type="CubeMesh" id=12]
 size = Vector3( 2, 4, 1.5 )
 
-[sub_resource type="CylinderMesh" id=12]
+[sub_resource type="SpatialMaterial" id=13]
+albedo_color = Color( 0, 0.564706, 0, 1 )
+metallic = 0.54
+roughness = 0.4
+emission_enabled = true
+emission = Color( 0, 0.211765, 0.462745, 1 )
+emission_energy = 2.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="CylinderMesh" id=14]
 material = ExtResource( 3 )
 top_radius = 13.0
 bottom_radius = 13.0
 height = 1.0
 
-[sub_resource type="CubeMesh" id=13]
+[sub_resource type="CubeMesh" id=15]
 size = Vector3( 2, 4, 1.5 )
 
-[sub_resource type="CylinderMesh" id=14]
+[sub_resource type="SpatialMaterial" id=16]
+albedo_color = Color( 0, 0.564706, 0, 1 )
+metallic = 0.54
+roughness = 0.4
+emission_enabled = true
+emission = Color( 0, 0.211765, 0.462745, 1 )
+emission_energy = 2.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="CylinderMesh" id=17]
 material = ExtResource( 3 )
 top_radius = 15.5
 bottom_radius = 15.0
 height = 1.0
 
-[sub_resource type="CylinderMesh" id=15]
+[sub_resource type="CylinderMesh" id=18]
 top_radius = 20.0
 bottom_radius = 20.0
 height = 20.0
 
-[sub_resource type="CylinderMesh" id=16]
+[sub_resource type="CylinderMesh" id=19]
 material = ExtResource( 3 )
 top_radius = 14.5
 bottom_radius = 14.5
 
-[sub_resource type="SpatialMaterial" id=17]
+[sub_resource type="SpatialMaterial" id=20]
 albedo_color = Color( 0, 0.211765, 0.462745, 1 )
 metallic = 0.54
 roughness = 0.4
@@ -112,25 +141,25 @@ emission_energy = 10.0
 emission_operator = 0
 emission_on_uv2 = false
 
-[sub_resource type="Curve" id=18]
+[sub_resource type="Curve" id=21]
 _data = [ Vector2( 0, 1 ), 0.0, -2.73239, 0, 0, Vector2( 0.140212, 0.557955 ), -3.43636, -3.43636, 0, 0, Vector2( 0.325397, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=19]
-curve = SubResource( 18 )
+[sub_resource type="CurveTexture" id=22]
+curve = SubResource( 21 )
 
-[sub_resource type="ParticlesMaterial" id=20]
+[sub_resource type="ParticlesMaterial" id=23]
 lifetime_randomness = 0.1
 flag_rotate_y = true
 direction = Vector3( 0, 0, 1 )
 spread = 0.0
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 75.35
-scale_curve = SubResource( 19 )
+scale_curve = SubResource( 22 )
 color = Color( 0.611765, 0.592157, 0.592157, 1 )
 anim_speed = 2.0
 anim_speed_random = 0.2
 
-[sub_resource type="SpatialMaterial" id=21]
+[sub_resource type="SpatialMaterial" id=24]
 flags_transparent = true
 flags_unshaded = true
 params_blend_mode = 1
@@ -138,12 +167,11 @@ params_depth_draw_mode = 1
 albedo_color = Color( 0.0196078, 0.466667, 0.603922, 1 )
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="QuadMesh" id=22]
-material = SubResource( 21 )
+[sub_resource type="QuadMesh" id=25]
+material = SubResource( 24 )
 size = Vector2( 15, 1 )
 
-[sub_resource type="Animation" id=23]
-resource_name = "float"
+[sub_resource type="Animation" id=26]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -180,18 +208,18 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.467005, 0.48292 )
 [node name="Point" type="CSGMesh" parent="RoundCage"]
 transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0.143425, -10.7148 )
 mesh = SubResource( 6 )
-material = ExtResource( 4 )
+material = SubResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CSGMesh3" type="CSGMesh" parent="RoundCage/Point"]
 transform = Transform( 3.06072e-08, 1, -1.05697e-07, 0.7, -4.37114e-08, 6.10865e-05, 6.10865e-05, -1.51e-07, -0.7, -9.03353e-07, -10.3332, 0.933374 )
-mesh = SubResource( 9 )
+mesh = SubResource( 10 )
 
 [node name="CSGMesh2" type="CSGMesh" parent="RoundCage/Point/CSGMesh3"]
 operation = 2
-mesh = SubResource( 10 )
+mesh = SubResource( 11 )
 material = ExtResource( 3 )
 
 [node name="CSGBox" type="CSGBox" parent="RoundCage/Point/CSGMesh3"]
@@ -202,19 +230,19 @@ depth = 24.3819
 
 [node name="Left" type="CSGMesh" parent="RoundCage"]
 transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -12.1295, -0.255148, -1.8035 )
-mesh = SubResource( 11 )
-material = ExtResource( 4 )
+mesh = SubResource( 12 )
+material = SubResource( 13 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CSGMesh2" type="CSGMesh" parent="RoundCage/Left"]
 transform = Transform( -1, -2.5411e-21, -8.74228e-08, 8.74228e-08, -4.37114e-08, -1, -3.82137e-15, -1, 4.37114e-08, -12.1295, 0.815062, 0.055771 )
-mesh = SubResource( 12 )
+mesh = SubResource( 14 )
 
 [node name="CSGMesh2" type="CSGMesh" parent="RoundCage/Left/CSGMesh2"]
 operation = 2
-mesh = SubResource( 10 )
+mesh = SubResource( 11 )
 
 [node name="CSGBox" type="CSGBox" parent="RoundCage/Left/CSGMesh2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.8833 )
@@ -224,21 +252,21 @@ depth = 29.3646
 
 [node name="Right" type="CSGMesh" parent="RoundCage"]
 transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 12.1357, -0.261918, -1.71363 )
-mesh = SubResource( 13 )
-material = ExtResource( 4 )
+mesh = SubResource( 15 )
+material = SubResource( 16 )
 
 [node name="Body" type="CSGMesh" parent="RoundCage"]
 transform = Transform( 1, 0, 0, 0, 0.753816, 0.657086, 0, -0.657086, 0.753816, 0, -7.7952, -3.01846 )
-mesh = SubResource( 14 )
+mesh = SubResource( 17 )
 
 [node name="CSGMesh3" type="CSGMesh" parent="RoundCage/Body"]
 transform = Transform( 1, 0, 0, 0, 0.745825, -0.666142, 0, 0.666142, 0.745825, 0, -1.41471, -1.23317 )
 operation = 2
-mesh = SubResource( 15 )
+mesh = SubResource( 18 )
 
 [node name="CSGMesh2" type="CSGMesh" parent="RoundCage/Body"]
 operation = 2
-mesh = SubResource( 16 )
+mesh = SubResource( 19 )
 
 [node name="CSGTorus" type="CSGTorus" parent="RoundCage/Body"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.849308, 0.130325 )
@@ -246,7 +274,7 @@ inner_radius = 9.0
 outer_radius = 15.0
 sides = 21
 ring_sides = 12
-material = SubResource( 17 )
+material = SubResource( 20 )
 
 [node name="CSGCylinder" type="CSGCylinder" parent="RoundCage/Body/CSGTorus"]
 transform = Transform( 1, 0, 0, 0, 0.921158, -0.389188, 0, 0.389188, 0.921158, 0, 3.342, -3.716 )
@@ -268,11 +296,11 @@ lifetime = 0.5
 randomness = 1.0
 visibility_aabb = AABB( -4, -4, -12.0056, 8, 8, 24.0112 )
 draw_order = 2
-process_material = SubResource( 20 )
-draw_pass_1 = SubResource( 22 )
+process_material = SubResource( 23 )
+draw_pass_1 = SubResource( 25 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "float"
-anims/float = SubResource( 23 )
+anims/float = SubResource( 26 )
 
 [node name="Spatial" type="Spatial" parent="."]

@@ -15,9 +15,11 @@ func _get_stats(choice): # Speed, weight, rate, dmg
 	var s = []
 	match choice:
 		1:
-			s = [50, 70, 40 ,70]
+			s = [50, 70, 40, 70]
 		2:
-			s = [80, 40, 80 ,30]
+			s = [80, 40, 60, 30]
+		3:
+			s = [30, 25, 80, 50]
 	return s
 
 

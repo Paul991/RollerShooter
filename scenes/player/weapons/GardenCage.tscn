@@ -1,14 +1,13 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/models/garden/fbx/lambert18_006.material" type="Material" id=1]
 [ext_resource path="res://assets/models/garden/texture/texture.png" type="Texture" id=2]
-[ext_resource path="res://assets/models/10183_GreenPeas-L2.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://assets/models/diverse/Carrot.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/player/weapons/GardenCage.gd" type="Script" id=4]
-[ext_resource path="res://scenes/shaders&particles/materials/rect_bullet.tres" type="Material" id=5]
 [ext_resource path="res://assets/textures/effects/push.png" type="Texture" id=7]
 [ext_resource path="res://scenes/player/weapons/DownCheck.tscn" type="PackedScene" id=8]
 
-[sub_resource type="ArrayMesh" id=18]
+[sub_resource type="ArrayMesh" id=1]
 blend_shape_mode = 0
 surfaces/0 = {
 "aabb": AABB( -0.239223, -0.0022008, -0.23027, 0.523878, 1.24415, 0.463388 ),
@@ -24,48 +23,40 @@ surfaces/0 = {
 "vertex_count": 2311
 }
 
-[sub_resource type="SpatialMaterial" id=19]
+[sub_resource type="SpatialMaterial" id=2]
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="CubeMesh" id=20]
+[sub_resource type="CubeMesh" id=3]
 size = Vector3( 15, 0.5, 0.25 )
 
-[sub_resource type="SpatialMaterial" id=21]
+[sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.266667, 0.203922, 0.054902, 1 )
 
-[sub_resource type="SpatialMaterial" id=22]
-flags_albedo_tex_force_srgb = true
-albedo_color = Color( 0.219608, 0.517647, 0.337255, 1 )
-
-[sub_resource type="SpatialMaterial" id=23]
+[sub_resource type="SpatialMaterial" id=5]
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="CubeMesh" id=24]
+[sub_resource type="CubeMesh" id=6]
 size = Vector3( 0.05, 1.7, 0.05 )
 
-[sub_resource type="SphereMesh" id=25]
-radius = 0.8
-height = 1.6
-
-[sub_resource type="Curve" id=13]
+[sub_resource type="Curve" id=7]
 _data = [ Vector2( 0, 1 ), 0.0, -2.73239, 0, 0, Vector2( 0.140212, 0.557955 ), -3.43636, -3.43636, 0, 0, Vector2( 0.325397, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=14]
-curve = SubResource( 13 )
+[sub_resource type="CurveTexture" id=8]
+curve = SubResource( 7 )
 
-[sub_resource type="ParticlesMaterial" id=15]
+[sub_resource type="ParticlesMaterial" id=9]
 lifetime_randomness = 0.1
 flag_rotate_y = true
 direction = Vector3( 0, 0, 1 )
 spread = 0.0
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 75.35
-scale_curve = SubResource( 14 )
+scale_curve = SubResource( 8 )
 color = Color( 0.611765, 0.592157, 0.592157, 1 )
 anim_speed = 2.0
 anim_speed_random = 0.2
 
-[sub_resource type="SpatialMaterial" id=16]
+[sub_resource type="SpatialMaterial" id=10]
 flags_transparent = true
 flags_unshaded = true
 params_blend_mode = 1
@@ -73,8 +64,8 @@ params_depth_draw_mode = 1
 albedo_color = Color( 0.0196078, 0.466667, 0.603922, 1 )
 albedo_texture = ExtResource( 7 )
 
-[sub_resource type="QuadMesh" id=17]
-material = SubResource( 16 )
+[sub_resource type="QuadMesh" id=11]
+material = SubResource( 10 )
 size = Vector2( 15, 1 )
 
 [node name="GardenCage" type="Spatial"]
@@ -84,74 +75,63 @@ script = ExtResource( 4 )
 
 [node name="cucumber" type="MeshInstance" parent="Frame"]
 transform = Transform( 15, 0, 0, 0, 14.7721, -2.60472, 0, 2.60472, 14.7721, 0, -5, 11 )
-mesh = SubResource( 18 )
-material/0 = SubResource( 19 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
 
 [node name="cucumber2" type="MeshInstance" parent="Frame"]
 transform = Transform( 11.8177, 2.08378, 0, -2.05212, 11.6382, -2.08378, -0.361844, 2.05212, 11.8177, 4, -2, 11 )
-mesh = SubResource( 18 )
-material/0 = SubResource( 19 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
 
 [node name="cucumber3" type="MeshInstance" parent="Frame"]
 transform = Transform( 11.8177, -2.08378, 0, 2.05212, 11.6382, -2.08378, 0.361844, 2.05212, 11.8177, -4, -2, 11 )
-mesh = SubResource( 18 )
-material/0 = SubResource( 19 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Frame"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.5595 )
-mesh = SubResource( 20 )
-material/0 = SubResource( 21 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="Frame"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.82752, 12.8029 )
-mesh = SubResource( 20 )
-material/0 = SubResource( 21 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
-[node name="GreenPeas" type="MeshInstance" parent="Frame"]
-transform = Transform( -1.49178, -0.156793, 2.27712e-08, -0.0272268, 0.259045, 1.47721, -0.154411, 1.46912, -0.260472, 12, 0, 0 )
-mesh = ExtResource( 3 )
-material/0 = SubResource( 22 )
+[node name="vines" type="CSGMesh" parent="Frame"]
+transform = Transform( 5.83231, 3.14371, 16.363, -16.5277, -1.73207, 6.63974, 4.10127, -11.4506, 3.48802, 9.21361, 0.941893, 12.8663 )
+mesh = SubResource( 1 )
+material = SubResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="vines" type="CSGMesh" parent="Frame/GreenPeas"]
-transform = Transform( -3.94836, -1.43724, -11.1686, 0.36861, -8.88197, 1.90165, -11.3258, 0.211972, 3.95545, 0.953047, 8.70354, -0.871079 )
-mesh = SubResource( 18 )
-material = SubResource( 23 )
-
-[node name="CSGMesh" type="CSGMesh" parent="Frame/GreenPeas/vines"]
+[node name="CSGMesh" type="CSGMesh" parent="Frame/vines"]
 transform = Transform( 1, 0, -1.13214e-22, 7.10543e-15, 1, -2.13163e-14, 1.33124e-15, 2.13163e-14, 1, 0, 0.486376, 2.12602e-08 )
 operation = 2
-mesh = SubResource( 24 )
+mesh = SubResource( 6 )
 
-[node name="GreenPeas2" type="MeshInstance" parent="Frame"]
-transform = Transform( 1.49178, 0.156793, -2.27712e-08, -0.0272268, 0.259045, 1.47721, -0.154411, 1.46912, -0.260472, -12, 0, 0 )
-mesh = ExtResource( 3 )
-material/0 = SubResource( 22 )
+[node name="vines2" type="CSGMesh" parent="Frame"]
+transform = Transform( -5.83231, -3.14371, -16.363, -16.5277, -1.73207, 6.63974, 4.10127, -11.4506, 3.48802, -9.21361, 0.941893, 12.8663 )
+mesh = SubResource( 1 )
+material = SubResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="vines" type="CSGMesh" parent="Frame/GreenPeas2"]
-transform = Transform( -3.94836, -1.43724, -11.1686, 0.36861, -8.88197, 1.90165, -11.3258, 0.211972, 3.95545, 0.953047, 8.70354, -0.871079 )
-mesh = SubResource( 18 )
-material = SubResource( 23 )
-
-[node name="CSGMesh" type="CSGMesh" parent="Frame/GreenPeas2/vines"]
-transform = Transform( 1, 0, -1.13214e-22, 7.10543e-15, 1, -2.13163e-14, 1.33124e-15, 2.13163e-14, 1, 0, 0.486376, 2.12602e-08 )
+[node name="CSGMesh" type="CSGMesh" parent="Frame/vines2"]
+transform = Transform( 1, 0, -1.49012e-08, 0, 1, 0, -1.11759e-08, 0, 1, 0, 0.486376, 0 )
 operation = 2
-mesh = SubResource( 24 )
+mesh = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Left" type="CSGMesh" parent="."]
-transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -12.659, -1.72609, -3.60691 )
-mesh = SubResource( 25 )
-material = ExtResource( 5 )
+[node name="Left" parent="." instance=ExtResource( 3 )]
+transform = Transform( 90, 0, 0, 0, 90, 0, 0, 0, 90, -12, -0.75, 1.4 )
 
-[node name="Right" type="CSGMesh" parent="."]
-transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 12.7632, -1.72609, -3.60691 )
-mesh = SubResource( 25 )
-material = ExtResource( 5 )
+[node name="Right" parent="." instance=ExtResource( 3 )]
+transform = Transform( 90, 0, 0, 0, 90, 0, 0, 0, 90, 12, -0.75, 1.4 )
 
 [node name="Pos" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.7692 )
@@ -163,7 +143,7 @@ lifetime = 0.5
 randomness = 1.0
 visibility_aabb = AABB( -4, -4, -12.0056, 8, 8, 24.0112 )
 draw_order = 2
-process_material = SubResource( 15 )
-draw_pass_1 = SubResource( 17 )
+process_material = SubResource( 9 )
+draw_pass_1 = SubResource( 11 )
 
 [node name="DownCheck" parent="." instance=ExtResource( 8 )]
