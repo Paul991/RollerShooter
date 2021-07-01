@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://assets/sfx/Alarm4.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/sfx/Bubbles2.wav" type="AudioStream" id=1]
 [ext_resource path="res://scenes/player/balls/Player.gd" type="Script" id=2]
 [ext_resource path="res://scenes/player/PlayerHurtBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/sfx/AlienWeapon4.wav" type="AudioStream" id=4]
@@ -104,7 +104,6 @@ unit_db = 30.0
 [node name="Engine" type="AudioStreamPlayer3D" parent="Sfx"]
 stream = ExtResource( 1 )
 unit_db = 30.0
-bus = "Effects"
 
 [node name="HurtBox" parent="." instance=ExtResource( 3 )]
 

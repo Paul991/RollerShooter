@@ -12,7 +12,7 @@ var bullet_scene = preload("res://scenes/player/weapons/CarrotBullet.tscn")
 
 func _process(delta: float) -> void:
 	if Player != null:
-		translation = Player.global_transform.origin
+		translation = Player.translation
 	if Input.get_action_strength("move") > 0:
 		if Push.emitting == false:
 			Push.set_emitting(true)

@@ -177,7 +177,10 @@ far = 500.0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.646 )
 
 [node name="Cabbage" parent="Players" instance=ExtResource( 9 )]
-transform = Transform( 0.940788, -0.0759994, -0.330366, 0.167731, 0.951251, 0.258819, 0.294591, -0.298907, 0.907673, -150, 7.4317, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -150, 7.4317, 0 )
+
+[node name="GardenCage" parent="Players/Cabbage" index="0"]
+transform = Transform( 0.940788, -0.0759994, -0.330366, 0.167731, 0.951251, 0.258819, 0.294591, -0.298907, 0.907673, 0, 0, 0 )
 
 [node name="FirePlayer" parent="Players" instance=ExtResource( 2 )]
 transform = Transform( 0.966623, -0.0805548, -0.24321, 0.163176, 0.925417, 0.34202, 0.19752, -0.370291, 0.907673, 50, 8.477, 10 )
@@ -203,5 +206,6 @@ directional_shadow_max_distance = 120.0
 
 [editable path="CanvasLayer/Buttons/Prev"]
 [editable path="CanvasLayer/Buttons/Start"]
+[editable path="Players/Cabbage"]
 [editable path="Players/FirePlayer"]
 [editable path="Players/FirePlayer/Pointer/Pipes"]

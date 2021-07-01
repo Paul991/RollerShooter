@@ -23,7 +23,7 @@ func _ready():
 
 
 func _process(delta: float) -> void:
-	translation = Player.global_transform.origin
+	translation = Player.translation
 	if Input.get_action_strength("move") > 0:
 		if Push.emitting == false:
 			Push.set_emitting(true)

@@ -34,21 +34,20 @@ export(int) var max_health setget _set_max_health
 var type = Cages.JET
 
 func _ready():
-
-	_spawn_cage()
 	_set_max_health(max_health)
 	start_pos = translation
 	rotation_degrees = start_rot
-
+	
+	_spawn_cage()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 #	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 ##	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _physics_process(delta):
+	var plane_speed = Vector2(linear_velocity.x, linear_velocity.z)
+	_engine_sound(get_speed(plane_speed))
 	if Cage != null and !main.defeat: # gotta make a autoload for the gamestates
-		var plane_speed = Vector2(linear_velocity.x, linear_velocity.z)
 		var dir = get_2d_dir(Cage.global_transform.origin, Cage.Pos.global_transform.origin)
-		_engine_sound(get_speed(plane_speed))
 		if Input.get_action_strength("move") > 0 and grounded:
 
 	#		camera_pos.rotation_degrees.y = lerp(camera_pos.rotation_degrees.y, Pointer.rotation_degrees.y, 0.02)
@@ -138,7 +137,7 @@ func death():
 
 func _engine_sound(value):
 	var current_speed = value
-	if current_speed > 1:
+	if current_speed > 10:
 		$Sfx/Engine.set_pitch_scale(current_speed/100+1.5)
 #		print(current_speed)
 

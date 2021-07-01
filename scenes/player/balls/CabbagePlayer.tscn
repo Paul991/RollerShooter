@@ -1,23 +1,23 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/player/balls/Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/sfx/debris-vegetable-cabbage-roll-squish-cement-01-sound-effect-95718384.wav" type="AudioStream" id=2]
 [ext_resource path="res://scenes/ui/healthbar.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/player/PlayerHurtBox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/sfx/AlienWeapon4.wav" type="AudioStream" id=5]
-[ext_resource path="res://assets/sfx/Alarm4.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/models/Cabbage.jpg" type="Texture" id=7]
 [ext_resource path="res://assets/models/12209_Vegetable_v1_L3.obj" type="ArrayMesh" id=8]
 
-[sub_resource type="PhysicsMaterial" id=6]
+[sub_resource type="PhysicsMaterial" id=1]
 resource_local_to_scene = true
 rough = true
 bounce = 1.0
 absorbent = true
 
-[sub_resource type="SphereShape" id=5]
+[sub_resource type="SphereShape" id=2]
 radius = 8.0
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.47451, 0.611765, 0.443137, 1 )
 albedo_texture = ExtResource( 7 )
 
@@ -31,7 +31,7 @@ random_pitch = 1.45
 collision_layer = 17
 collision_mask = 2
 mass = 2.0
-physics_material_override = SubResource( 6 )
+physics_material_override = SubResource( 1 )
 gravity_scale = 27.0
 can_sleep = false
 linear_damp = 0.5
@@ -45,12 +45,12 @@ max_health = 400
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.6, 0, 0, 0, 1, 0, 0, 0 )
-shape = SubResource( 5 )
+shape = SubResource( 2 )
 
 [node name="Cabbage" type="MeshInstance" parent="."]
 transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
 mesh = ExtResource( 8 )
-material/0 = SubResource( 2 )
+material/0 = SubResource( 3 )
 
 [node name="BulletCooldown" type="Timer" parent="."]
 wait_time = 0.07
@@ -63,9 +63,8 @@ stream = SubResource( 4 )
 unit_db = 30.0
 
 [node name="Engine" type="AudioStreamPlayer3D" parent="Sfx"]
-stream = ExtResource( 6 )
-unit_db = 30.0
-bus = "Effects"
+stream = ExtResource( 2 )
+unit_db = 35.0
 
 [node name="HurtBox" parent="." instance=ExtResource( 4 )]
 
