@@ -67,7 +67,7 @@ func _match_ball():
 			b = cabbage_scn.instance()
 	get_parent().call_deferred("add_child", b)
 	get_parent().player = b
-	b.translation = global_transform.origin
+	b.translation = translation
 	b.start_rot = rotation_degrees
 	_match_cage(b)
 

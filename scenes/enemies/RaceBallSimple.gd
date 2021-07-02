@@ -33,7 +33,7 @@ func _physics_process(delta):
 	if patrol_path != null and $RespawnTime.is_stopped():
 		var target = patrol_points[patrol_index]
 		var dir = get_2d_dir(global_transform.origin, target)
-		var dist = get_distance_2d(translation, target)
+		var dist = get_distance_2d(global_transform.origin, target)
 		if dist < 40:
 			patrol_index = wrapi(patrol_index + 1, 0, patrol_points.size())
 #			print(patrol_points.size())

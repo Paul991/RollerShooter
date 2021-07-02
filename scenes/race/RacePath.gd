@@ -25,7 +25,7 @@ func _ready() -> void:
 				add_object(spikey_scene, target)
 			else:
 				add_object(sawey_scene, target)
-			patrol_index += 3
+			patrol_index += skip
 	
 	
 	
@@ -36,7 +36,7 @@ func _get_data():
 func add_object(object, pos):
 	var s = object.instance()
 	get_parent().get_node("Enemies").call_deferred("add_child", s)
-	s.translation = pos
+	s.global_transform.origin = pos
 	s.patrol_index = patrol_index
 	s.patrol_start = patrol_index
 	s.start_pos = pos
